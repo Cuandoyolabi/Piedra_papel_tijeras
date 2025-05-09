@@ -7,6 +7,17 @@
      font-family: "Barlow Semi Condensed", sans-serif;
 }
 
+:root{
+    --Scissors-Gradient: hsl(39, 89%, 49%), hsl(40, 84%, 53%);
+    --Paper-Gradient: hsl(230, 89%, 62%), hsl(230, 89%, 65%);
+    --Rock-Gradient: hsl(349, 71%, 52%), hsl(349, 70%, 56%);
+    --Lizard-Gradient: hsl(261, 73%, 60%), hsl(261, 72%, 63%);
+    --Spock-Gradient: hsl(189, 59%, 53%), hsl(189, 58%, 57%);
+    --Dark-Text: hsl(229, 25%, 31%);
+    --Score-Text: hsl(229, 64%, 46%);
+    --Header-Outline: hsl(217, 16%, 45%);
+}
+
 
 .contenedor__principal{
     width: 100%;
@@ -86,7 +97,7 @@
     top: 40px;
     left: 80px;
     border-radius: 50%;
-    background-color: blue;
+    background: radial-gradient(circle at center, var(--Paper-Gradient));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,7 +120,7 @@
     top: 40px;
     right: 80px;
     border-radius: 50%;
-    background-color: rgb(255, 255, 18);
+    background: radial-gradient(circle at center, var(--Scissors-Gradient));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,7 +143,7 @@
     top: 200px;
     left: 150px;
     border-radius: 50%;
-    background-color: rgb(215, 40, 40);
+    background: radial-gradient(circle at center, var(--Rock-Gradient));
     display: flex;
     justify-content: center;
     align-items: center;
