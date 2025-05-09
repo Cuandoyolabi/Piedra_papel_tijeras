@@ -17,6 +17,7 @@
 }
 
 /*------------------Seccion de arriba ------------------- */
+
 .contenedor__conjunto{
     width: 80%;
     height: 90px;
@@ -60,6 +61,19 @@
     color: rgb(88, 88, 88)
 }
 
+/*---------------Seccion main del juego -----------------*/
+
+.contenedor__juego{
+    width: 100%;
+    height: 40%;
+    top: 240px;
+    position: absolute;
+    display: flex;
+    border: 1px solid red;
+}
+
+
+/*--------------Seccion de reglas del juego--------------*/
 
 
 /* Estilos de la pagina */
