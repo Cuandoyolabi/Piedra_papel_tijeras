@@ -62,7 +62,7 @@
 }
 
 .contenedor__puntaje__texto{
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
     color: hsl(228, 45%, 44%);
 
@@ -87,19 +87,19 @@
     align-items: center;
 }
 
-.contenedor__juego__triangulo{
-    width: 200px;
-    height: 200px;
-}
-
-.ficha__de__juego__interior{
-    width: 93px;
-    height: 93px;
+.contendor__juego__interseccion{
+    width: 375px;
+    height: 400px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    background-color: white;
+    background-color: transparent;
+}
+
+.contenedor__juego__triangulo{
+    width: 300px;
+    height: 200px;
 }
 
 .ficha__de__juego{
@@ -114,22 +114,32 @@
     z-index: 0;
 }
 
+.ficha__de__juego__interior{
+    width: 93px;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
 .papel{
     background: radial-gradient(circle at center, var(--Paper-Gradient));
-    top: 40px;
-    left: 80px;
+    top: 50px;
+    left: 30px;
 }
 
 .tijera{
     background: radial-gradient(circle at center, var(--Scissors-Gradient));
-    top: 40px;
-    right: 80px;
+    top: 50px;
+    right: 30px;
 }
 
 .roca{
     background: radial-gradient(circle at center, var(--Rock-Gradient));
     top: 200px;
-    left: 150px;
+    left: 130px;
 }
 
 .ficha__icono{
@@ -153,4 +163,74 @@
     color: white;
     cursor: pointer;
     font-size: 18px;
+}
+
+@media (min-width: 1366px){
+
+    .contenedor__conjunto{
+        height: 200px;
+    }
+
+    .contenedor__conjunto__logo{
+        width: 230px;
+        margin-left: 40px;
+    }
+
+    .contenedor__puntaje{
+        margin-right: 20px;
+    }
+
+    .contenedor__puntaje__texto{
+        font-size: 30px;
+    }
+
+    .contenedor__puntaje__numero{
+        font-size: 80px;
+    }
+
+    /* Juego */
+
+    .contenedor__juego{
+        height: 60%;
+        border: 1px solid red;
+        top: 400px;
+    }
+
+    .contenedor__juego__interseccion{
+        border: 1px solid rgb(255, 238, 2);
+    }
+
+    .contenedor__juego__triangulo{
+        width: 400px;
+        height: 350px;
+    }
+
+    .ficha__de__juego{
+        width: 220px;
+        height: 220px;
+    }
+
+    .ficha__de__juego__interior{
+        width: 170px;
+        height: 170px;
+    }
+
+    .papel{
+        left: 0px;
+    }
+
+    .tijera{
+        right: 400px;
+    }
+
+    .roca{
+        top: 350px;
+        left: 570px;
+    }
+
+    .ficha__icono{
+        width: 80px;
+        height: 80px;
+    }
+
 }
