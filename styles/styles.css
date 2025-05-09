@@ -69,9 +69,84 @@
     top: 240px;
     position: absolute;
     display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid red;
 }
 
+.contenedor__juego__triangulo{
+    width: 50%;
+    height: 50%;
+}
+
+.ficha__de__juego__papel{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    border-radius: 50%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ficha__de__juego__interior__papel{
+    width: 93px;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.ficha__de__juego__tijera{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ficha__de__juego__interior__tijera{
+    width: 93px;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.ficha__de__juego__puño{
+     width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    border-radius: 50%;
+    background-color: rgb(215, 40, 40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ficha__de__juego__interior__puño{
+    width: 93px;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
 
 /*--------------Seccion de reglas del juego--------------*/
 
