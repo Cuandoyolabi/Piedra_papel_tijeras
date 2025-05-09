@@ -1,11 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+     font-family: "Barlow Semi Condensed", sans-serif;
 }
 
-.main__contenedor{
+
+.contenedor__principal{
     width: 100%;
-    height: 100%;
-    background-color: blue;
+    height: 100vh;
+    position: relative;
+    background: radial-gradient(circle at center, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
 }
+
+/*------------------Seccion de arriba ------------------- */
+.contenedor__conjunto{
+    width: 80%;
+    height: 90px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    border: 3px solid rgb(160, 160, 160);
+    border-radius: 9px;
+}
+
+.contenedor__conjunto__logo{
+    width: 80px;
+    margin-left: 20px;
+}
+
+.contenedor__puntaje{
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.contenedor__puntaje__texto{
+    font-size: 10px;
+    font-weight: 600;
+    color: hsl(228, 45%, 44%);
+
+}
+
+.contenedor__puntaje__numero{
+    color: rgb(88, 88, 88)
+}
+
+
+
+/* Estilos de la pagina */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
