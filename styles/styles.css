@@ -77,8 +77,11 @@
 .contenedor__juego{
     width: 100%;
     height: 40%;
-    top: 240px;
     position: absolute;
+    top: 240px;
+    left: 0;
+    right: 0;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,82 +89,51 @@
 }
 
 .contenedor__juego__triangulo{
-    width: 50%;
-    height: 50%;
+    width: 200px;
+    height: 200px;
 }
 
-.ficha__de__juego__papel{
+.ficha__de__juego__interior{
+    width: 93px;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.ficha__de__juego{
     width: 120px;
     height: 120px;
     position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.papel{
+    background: radial-gradient(circle at center, var(--Paper-Gradient));
     top: 40px;
     left: 80px;
-    border-radius: 50%;
-    background: radial-gradient(circle at center, var(--Paper-Gradient));
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.ficha__de__juego__interior__papel{
-    width: 93px;
-    height: 93px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: white;
-}
-
-.ficha__de__juego__tijera{
-    width: 120px;
-    height: 120px;
-    position: absolute;
+.tijera{
+    background: radial-gradient(circle at center, var(--Scissors-Gradient));
     top: 40px;
     right: 80px;
-    border-radius: 50%;
-    background: radial-gradient(circle at center, var(--Scissors-Gradient));
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.ficha__de__juego__interior__tijera{
-    width: 93px;
-    height: 93px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: white;
-}
-
-.ficha__de__juego__puño{
-     width: 120px;
-    height: 120px;
-    position: absolute;
+.roca{
+    background: radial-gradient(circle at center, var(--Rock-Gradient));
     top: 200px;
     left: 150px;
-    border-radius: 50%;
-    background: radial-gradient(circle at center, var(--Rock-Gradient));
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.ficha__de__juego__interior__puño{
-    width: 93px;
-    height: 93px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: white;
-}
+
+
 
 /*--------------Seccion de reglas del juego--------------*/
 
 
-/* Estilos de la pagina */
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
