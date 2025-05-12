@@ -168,12 +168,13 @@
 @media (min-width: 1366px){
 
     .contenedor__conjunto{
-        height: 200px;
+        width: 50%;
+        height: 150px;
     }
 
     .contenedor__conjunto__logo{
-        width: 230px;
-        margin-left: 40px;
+        width: 160px;
+        margin-left: 30px;
     }
 
     .contenedor__puntaje{
@@ -181,56 +182,64 @@
     }
 
     .contenedor__puntaje__texto{
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .contenedor__puntaje__numero{
-        font-size: 80px;
+        font-size: 50px;
     }
 
     /* Juego */
 
     .contenedor__juego{
-        height: 60%;
-        border: 1px solid red;
-        top: 400px;
+        top: 300px;
     }
 
     .contenedor__juego__interseccion{
+        background-color: white;
         border: 1px solid rgb(255, 238, 2);
     }
 
     .contenedor__juego__triangulo{
-        width: 400px;
-        height: 350px;
+        width: 250px;
+        height: 200px;
     }
 
     .ficha__de__juego{
-        width: 220px;
-        height: 220px;
+        width: 180px;
+        height: 180px;
     }
 
     .ficha__de__juego__interior{
-        width: 170px;
-        height: 170px;
+        width: 140px;
+        height: 140px;
     }
 
     .papel{
-        left: 0px;
+        top: 0px;
+        left: -50px;
     }
 
     .tijera{
-        right: 400px;
+        top: 5px;
+        right: -50px;
     }
 
     .roca{
-        top: 350px;
-        left: 570px;
+        top: 220px;
+        left: 100px;
     }
 
     .ficha__icono{
         width: 80px;
         height: 80px;
+    }
+
+    /* Seccion de reglas */
+
+    .contentedor__reglas__button{
+        bottom: 10%;
+        left: 80%;
     }
 
 }
