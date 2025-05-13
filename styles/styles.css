@@ -104,6 +104,10 @@
     height: 200px;
 }
 
+.contenedor__juego__triangulo.hidden{
+    display: none;
+}
+
 .ficha__de__juego{
     width: 120px;
     height: 120px;
@@ -132,16 +136,28 @@
     left: 30px;
 }
 
+.papel.active{
+    display: none;
+}
+
 .tijera{
     background: radial-gradient(circle at center, var(--Scissors-Gradient));
     top: 50px;
     right: 30px;
 }
 
+.tijera.active{
+    display: none;
+}
+
 .roca{
     background: radial-gradient(circle at center, var(--Rock-Gradient));
     top: 200px;
     left: 130px;
+}
+
+.roca.active{
+    display: none;
 }
 
 .ficha__icono{

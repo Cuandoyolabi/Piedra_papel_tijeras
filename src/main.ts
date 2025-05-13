@@ -28,10 +28,29 @@ const fichaRoca = document.getElementById("roca") as HTMLDivElement;
 fichaPapel.addEventListener('click', () => {
 
 
+    fichaTijera.classList.add("active");
+    fichaRoca.classList.add("active");
+    seleccionDeFicha();
     
 
 });
 
+fichaTijera.addEventListener('click', () => {
+
+    fichaPapel.classList.add("active");
+    fichaRoca.classList.add("active");
+    seleccionDeFicha();
+
+});
+
+
+fichaRoca.addEventListener('click', () => {
+
+    fichaTijera.classList.add("active");
+    fichaPapel.classList.add("active");
+    seleccionDeFicha();
+
+})
 
 const triangulo = document.getElementById("triangulo") as HTMLImageElement;
 
@@ -40,6 +59,13 @@ function seleccionDeFicha(){
     triangulo.classList.add("hidden");
 
 }
+
+//Creando la logica de juego
+let decisionDeLaMaquina = "";
+let decisiones = ["piedra", "papel", "tijera"];
+// Necesito que la maquina seleccione uno de estos 3 de forma aleatoria
+
+
 
 
 
