@@ -184,6 +184,27 @@
     height: 45px;
 }
 
+/*-------------Elementos agregados desde JavaScript (ETAPA 2)-----------------*/
+.jugador__texto{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 55%;
+    left: 15%;
+}
+
+.maquina__texto{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 55%;
+    right: 10%;
+}
+
+
+
 /*--------------Seccion de reglas del juego--------------*/
 
 .contentedor__reglas__button{

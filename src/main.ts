@@ -25,7 +25,7 @@ const fichaPapel = document.getElementById("papel") as HTMLDivElement;
 const fichaTijera = document.getElementById("tijera") as HTMLDivElement;
 const fichaRoca = document.getElementById("roca") as HTMLDivElement;
 
-//Obtener ese div para insertar dos textos
+//Crear una variable que se llene cuando elija una figura
 
 fichaPapel.addEventListener('click', () => {
 
@@ -59,6 +59,19 @@ function seleccionDeFicha(){
 
     const triangulo = document.getElementById("triangulo") as HTMLImageElement;
     triangulo.classList.add("hidden");
+
+    //Obtener ese div para insertar dos textos
+    const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id") as HTMLDivElement;
+    
+    const eleccion__DelJugador__texto = document.createElement("p");
+    eleccion__DelJugador__texto.textContent = "YOU PICKED";
+    eleccion__DelJugador__texto.classList.add("jugador__texto");
+    contendor__juego__interseccion__id.appendChild(eleccion__DelJugador__texto);
+
+    const eleccion__DeLaMaquina__texto = document.createElement("p"); 
+    eleccion__DeLaMaquina__texto.textContent ="THE HOUSE PICKED";
+    eleccion__DeLaMaquina__texto.classList.add("maquina__texto");
+    contendor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
 
 }
 

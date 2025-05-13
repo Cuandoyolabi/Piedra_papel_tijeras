@@ -16,7 +16,7 @@ cerrarReglas.addEventListener('click', () => {
 const fichaPapel = document.getElementById("papel");
 const fichaTijera = document.getElementById("tijera");
 const fichaRoca = document.getElementById("roca");
-//Obtener ese div para insertar dos textos
+//Crear una variable que se llene cuando elija una figura
 fichaPapel.addEventListener('click', () => {
     fichaPapel.classList.add("seleccionado");
     fichaTijera.classList.add("active");
@@ -38,6 +38,16 @@ fichaRoca.addEventListener('click', () => {
 function seleccionDeFicha() {
     const triangulo = document.getElementById("triangulo");
     triangulo.classList.add("hidden");
+    //Obtener ese div para insertar dos textos
+    const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id");
+    const eleccion__DelJugador__texto = document.createElement("p");
+    eleccion__DelJugador__texto.textContent = "YOU PICKED";
+    eleccion__DelJugador__texto.classList.add("jugador__texto");
+    contendor__juego__interseccion__id.appendChild(eleccion__DelJugador__texto);
+    const eleccion__DeLaMaquina__texto = document.createElement("p");
+    eleccion__DeLaMaquina__texto.textContent = "THE HOUSE PICKED";
+    eleccion__DeLaMaquina__texto.classList.add("maquina__texto");
+    contendor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
 }
 //Creando la logica de juego
 let decisionDeLaMaquina = "";
