@@ -17,3 +17,53 @@ cerrarReglas.addEventListener('click', () => {
 
 });
 
+// Logica de juego
+
+
+// 1-Poder seleccionar una ficha y que las demas fichas desaparezcan
+const fichaPapel = document.getElementById("papel") as HTMLDivElement;
+const fichaTijera = document.getElementById("tijera") as HTMLDivElement;
+const fichaRoca = document.getElementById("roca") as HTMLDivElement;
+
+fichaPapel.addEventListener('click', () => {
+
+
+    
+
+});
+
+
+const triangulo = document.getElementById("triangulo") as HTMLImageElement;
+
+function seleccionDeFicha(){
+
+    triangulo.classList.add("hidden");
+
+}
+
+
+
+//2- Que la maquina elija un ficha de las 3 de una forma random
+
+
+//3-Algoritmo que determina quien gano o perdio, si perdio baja el score y si gana, sube
+
+
+//4-Crear un boton de reinicio para jugar otra vez
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
