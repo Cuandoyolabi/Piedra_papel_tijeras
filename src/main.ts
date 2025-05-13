@@ -84,7 +84,12 @@ function seleccionDeFicha(){
     eleccion__DeLaMaquina__texto.classList.add("maquina__texto");
     contendor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
 
+    const espacioVacio = document.createElement("div");
+    espacioVacio.classList.add("espacio__vacio");
+    contendor__juego__interseccion__id.appendChild(espacioVacio);
+
 }
+
 
 
 

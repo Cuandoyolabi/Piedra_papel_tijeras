@@ -149,14 +149,12 @@
 
 .tijera{
     background: radial-gradient(circle at center, var(--Scissors-Gradient));
-    top: 50px;
-    right: 30px;
+    top: 50px; right: 30px;
     transition: all 0.5s ease;
 }
 
 .tijera.seleccionado{
-    top: 20%;
-    left: 10%;
+    top: 20%; left: 10%;
 }
 
 .tijera.active{
@@ -165,14 +163,12 @@
 
 .roca{
     background: radial-gradient(circle at center, var(--Rock-Gradient));
-    top: 200px;
-    left: 130px;
+    top: 200px; left: 130px;
     transition: all 0.5s ease;
 }
 
 .roca.seleccionado{
-    top: 20%;
-    left: 10%;
+    top: 20%; left: 10%;
 }
 
 .roca.active{
@@ -180,8 +176,7 @@
 }
 
 .ficha__icono{
-    width: 45px;
-    height: 45px;
+    width: 45px; height: 45px;
 }
 
 /*-------------Elementos agregados desde JavaScript (ETAPA 2)-----------------*/
@@ -190,8 +185,7 @@
     font-size: 16px;
     font-weight: 500;
     position: absolute;
-    top: 55%;
-    left: 15%;
+    top: 55%; left: 15%;
 }
 
 .maquina__texto{
@@ -199,10 +193,17 @@
     font-size: 16px;
     font-weight: 500;
     position: absolute;
-    top: 55%;
-    right: 10%;
+    top: 55%; right: 10%;
 }
 
+.espacio__vacio{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%; right: 10%;
+    background-color: var(--Dark-Text)
+}
 
 
 /*--------------Seccion de reglas del juego--------------*/
@@ -211,9 +212,7 @@
     width: 150px;
     height: 40px;
     position: absolute;
-    bottom: 100px;
-    left: 0;
-    right: 0;
+    bottom: 100px; left: 0; right: 0;
     margin: auto;
     border-radius: 9px;
     background-color: transparent;
