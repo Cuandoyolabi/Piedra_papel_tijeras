@@ -17,22 +17,29 @@ const fichaPapel = document.getElementById("papel");
 const fichaTijera = document.getElementById("tijera");
 const fichaRoca = document.getElementById("roca");
 //Crear una variable que se llene cuando elija una figura
+let ficha__seleccionada = "";
 fichaPapel.addEventListener('click', () => {
     fichaPapel.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaRoca.classList.add("active");
+    ficha__seleccionada = "papel";
+    console.log(ficha__seleccionada);
     seleccionDeFicha();
 });
 fichaTijera.addEventListener('click', () => {
     fichaTijera.classList.add("seleccionado");
     fichaPapel.classList.add("active");
     fichaRoca.classList.add("active");
+    ficha__seleccionada = "tijera";
+    console.log(ficha__seleccionada);
     seleccionDeFicha();
 });
 fichaRoca.addEventListener('click', () => {
     fichaRoca.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
+    ficha__seleccionada = "roca";
+    console.log(ficha__seleccionada);
     seleccionDeFicha();
 });
 function seleccionDeFicha() {

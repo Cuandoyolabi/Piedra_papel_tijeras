@@ -26,12 +26,17 @@ const fichaTijera = document.getElementById("tijera") as HTMLDivElement;
 const fichaRoca = document.getElementById("roca") as HTMLDivElement;
 
 //Crear una variable que se llene cuando elija una figura
+let ficha__seleccionada: string = "";
 
 fichaPapel.addEventListener('click', () => {
 
     fichaPapel.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaRoca.classList.add("active");
+    
+    ficha__seleccionada = "papel";
+    
+    console.log(ficha__seleccionada);
     seleccionDeFicha();
     
 
@@ -42,6 +47,9 @@ fichaTijera.addEventListener('click', () => {
     fichaTijera.classList.add("seleccionado");
     fichaPapel.classList.add("active");
     fichaRoca.classList.add("active");
+    
+    ficha__seleccionada = "tijera";
+    console.log(ficha__seleccionada)
     seleccionDeFicha();
 
 });
@@ -51,6 +59,9 @@ fichaRoca.addEventListener('click', () => {
     fichaRoca.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
+    
+    ficha__seleccionada = "roca";
+    console.log(ficha__seleccionada)
     seleccionDeFicha();
 
 })
@@ -75,9 +86,11 @@ function seleccionDeFicha(){
 
 }
 
+
+
 //Creando la logica de juego
-let decisionDeLaMaquina = "";
-let decisiones = ["piedra", "papel", "tijera"];
+let decisionDeLaMaquina : string = "";
+let decisiones: string[] = ["piedra", "papel", "tijera"];
 // Necesito que la maquina seleccione uno de estos 3 de forma aleatoria
 
 
