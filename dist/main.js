@@ -16,23 +16,27 @@ cerrarReglas.addEventListener('click', () => {
 const fichaPapel = document.getElementById("papel");
 const fichaTijera = document.getElementById("tijera");
 const fichaRoca = document.getElementById("roca");
+//Obtener ese div para insertar dos textos
 fichaPapel.addEventListener('click', () => {
+    fichaPapel.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaRoca.classList.add("active");
     seleccionDeFicha();
 });
 fichaTijera.addEventListener('click', () => {
+    fichaTijera.classList.add("seleccionado");
     fichaPapel.classList.add("active");
     fichaRoca.classList.add("active");
     seleccionDeFicha();
 });
 fichaRoca.addEventListener('click', () => {
+    fichaRoca.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
     seleccionDeFicha();
 });
-const triangulo = document.getElementById("triangulo");
 function seleccionDeFicha() {
+    const triangulo = document.getElementById("triangulo");
     triangulo.classList.add("hidden");
 }
 //Creando la logica de juego

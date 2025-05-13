@@ -25,9 +25,11 @@ const fichaPapel = document.getElementById("papel") as HTMLDivElement;
 const fichaTijera = document.getElementById("tijera") as HTMLDivElement;
 const fichaRoca = document.getElementById("roca") as HTMLDivElement;
 
+//Obtener ese div para insertar dos textos
+
 fichaPapel.addEventListener('click', () => {
 
-
+    fichaPapel.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaRoca.classList.add("active");
     seleccionDeFicha();
@@ -37,25 +39,25 @@ fichaPapel.addEventListener('click', () => {
 
 fichaTijera.addEventListener('click', () => {
 
+    fichaTijera.classList.add("seleccionado");
     fichaPapel.classList.add("active");
     fichaRoca.classList.add("active");
     seleccionDeFicha();
 
 });
 
-
 fichaRoca.addEventListener('click', () => {
 
+    fichaRoca.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
     seleccionDeFicha();
 
 })
 
-const triangulo = document.getElementById("triangulo") as HTMLImageElement;
-
 function seleccionDeFicha(){
 
+    const triangulo = document.getElementById("triangulo") as HTMLImageElement;
     triangulo.classList.add("hidden");
 
 }
