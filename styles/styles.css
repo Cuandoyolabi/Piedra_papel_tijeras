@@ -173,7 +173,7 @@
     height: 100vh;
     position: absolute;
     top: 0;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -181,14 +181,9 @@
 
 }
 
-.pagina__reglas.active {
+.active {
     display: flex;
     z-index: 4;
-}
-
-.pagina__reglas.hidden {
-    display: none;
-    z-index: 0;
 }
 
 .pagina__reglas__texto{
@@ -271,6 +266,13 @@
     .contentedor__reglas__button{
         bottom: 10%;
         left: 80%;
+    }
+
+    .pagina__reglas{
+        width: 500px; height: 500px;
+        top: 100px; left: 0; right: 0;
+        margin: auto;
+        border-radius: 9px;
     }
 
 }

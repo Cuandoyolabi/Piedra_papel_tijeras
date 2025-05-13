@@ -4,13 +4,13 @@ const cerrarReglas = document.getElementById('cerrar__boton') as HTMLButtonEleme
 
 botonReglas.addEventListener('click', () => {
 
-    paginaReglas.classList.toggle('active');
+    paginaReglas.classList.add('active');
 
 });
 
 cerrarReglas.addEventListener('click', () => {
 
-        paginaReglas.classList.toggle('hidden');
-        
+    paginaReglas.classList.remove('active');
+
 });
 
