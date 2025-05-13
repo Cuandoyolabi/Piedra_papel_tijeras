@@ -42,6 +42,7 @@ fichaRoca.addEventListener('click', () => {
     console.log(ficha__seleccionada);
     seleccionDeFicha();
 });
+//Funcion que cambia la interfaz del programa y deja la ficha que el jugador selecciono
 function seleccionDeFicha() {
     const triangulo = document.getElementById("triangulo");
     triangulo.classList.add("hidden");
@@ -59,9 +60,17 @@ function seleccionDeFicha() {
     espacioVacio.classList.add("espacio__vacio");
     contendor__juego__interseccion__id.appendChild(espacioVacio);
 }
+//Funcion que elige una ficha del array de manera aleatoria
+function seleccionDeLaMaquina() {
+    let decisionDeLaMaquina = "";
+    let decisiones = ["piedra", "papel", "tijera"];
+    //Crear un numero random
+    //Iterar sobre el array de fichas
+    //Una vez la ficha elegida, crear el algoritmo de condiciones donde uno le gane al otro y asi 
+    //Crear una variable nueva que diga el texto de si ganas o perdiste+
+    //Crear un boton que reinicie el juego
+}
 //Creando la logica de juego
-let decisionDeLaMaquina = "";
-let decisiones = ["piedra", "papel", "tijera"];
 // Necesito que la maquina seleccione uno de estos 3 de forma aleatoria
 //2- Que la maquina elija un ficha de las 3 de una forma random
 //3-Algoritmo que determina quien gano o perdio, si perdio baja el score y si gana, sube

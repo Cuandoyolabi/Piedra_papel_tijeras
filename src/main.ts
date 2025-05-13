@@ -66,6 +66,7 @@ fichaRoca.addEventListener('click', () => {
 
 })
 
+//Funcion que cambia la interfaz del programa y deja la ficha que el jugador selecciono
 function seleccionDeFicha(){
 
     const triangulo = document.getElementById("triangulo") as HTMLImageElement;
@@ -74,28 +75,44 @@ function seleccionDeFicha(){
     //Obtener ese div para insertar dos textos
     const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id") as HTMLDivElement;
     
-    const eleccion__DelJugador__texto = document.createElement("p");
+    const eleccion__DelJugador__texto: HTMLParagraphElement = document.createElement("p");
     eleccion__DelJugador__texto.textContent = "YOU PICKED";
     eleccion__DelJugador__texto.classList.add("jugador__texto");
     contendor__juego__interseccion__id.appendChild(eleccion__DelJugador__texto);
 
-    const eleccion__DeLaMaquina__texto = document.createElement("p"); 
+    const eleccion__DeLaMaquina__texto: HTMLParagraphElement= document.createElement("p"); 
     eleccion__DeLaMaquina__texto.textContent ="THE HOUSE PICKED";
     eleccion__DeLaMaquina__texto.classList.add("maquina__texto");
     contendor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
 
-    const espacioVacio = document.createElement("div");
+    const espacioVacio: HTMLDivElement = document.createElement("div");
     espacioVacio.classList.add("espacio__vacio");
     contendor__juego__interseccion__id.appendChild(espacioVacio);
 
 }
 
+//Funcion que elige una ficha del array de manera aleatoria
+function seleccionDeLaMaquina(){
+
+    let decisionDeLaMaquina : string = "";
+    let decisiones: string[] = ["piedra", "papel", "tijera"];
+
+    //Crear un numero random
+
+    //Iterar sobre el array de fichas
+
+    //Una vez la ficha elegida, crear el algoritmo de condiciones donde uno le gane al otro y asi 
+
+    //Crear una variable nueva que diga el texto de si ganas o perdiste+
+
+    //Crear un boton que reinicie el juego
+
+}
 
 
 
 //Creando la logica de juego
-let decisionDeLaMaquina : string = "";
-let decisiones: string[] = ["piedra", "papel", "tijera"];
+
 // Necesito que la maquina seleccione uno de estos 3 de forma aleatoria
 
 
