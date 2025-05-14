@@ -233,8 +233,9 @@
 
 .roca__maquina.seleccionada{
     display: flex;
-    top: 20%; right: 50%;
-
+    top: 20%; right: -13%;
+    margin: auto;
+    z-index: 5;
 }
 
 /*--------------Seccion de reglas del juego--------------*/

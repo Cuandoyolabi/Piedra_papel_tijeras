@@ -71,18 +71,17 @@ function seleccionDeLaMaquina() {
     console.log(decisionDeLaMaquina);
     const fichaPapelMaquina = document.getElementById("papel__maquina__id");
     const fichaTijeraMaquina = document.getElementById("tijera__maquina__id");
-    const fichaRocaMaquina = document.getElementById("tijera__maquina__id");
+    const fichaRocaMaquina = document.getElementById("roca__maquina__id");
     if (decisionDeLaMaquina === "papel") {
         fichaPapelMaquina.classList.add("seleccionada");
-        juego(ficha__seleccionada, decisionDeLaMaquina);
     }
     else if (decisionDeLaMaquina === "piedra") {
         fichaRocaMaquina.classList.add("seleccionada");
-        juego(ficha__seleccionada, decisionDeLaMaquina);
     }
     else {
         fichaTijeraMaquina.classList.add("seleccionada");
     }
+    juego(ficha__seleccionada, decisionDeLaMaquina);
 }
 function juego(ficha__del__jugador, ficha__maquina) {
     if (ficha__del__jugador === "papel" && ficha__maquina === "tijera") {

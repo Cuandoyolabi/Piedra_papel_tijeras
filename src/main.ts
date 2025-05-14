@@ -103,20 +103,19 @@ function seleccionDeLaMaquina(){
 
     const fichaPapelMaquina = document.getElementById("papel__maquina__id") as HTMLDivElement;
     const fichaTijeraMaquina = document.getElementById("tijera__maquina__id") as HTMLDivElement;
-    const fichaRocaMaquina = document.getElementById("tijera__maquina__id") as HTMLDivElement;
+    const fichaRocaMaquina = document.getElementById("roca__maquina__id") as HTMLDivElement;
 
     if(decisionDeLaMaquina === "papel"){
         fichaPapelMaquina.classList.add("seleccionada");
-        juego(ficha__seleccionada, decisionDeLaMaquina);
-
 
     } else if( decisionDeLaMaquina === "piedra"){
         fichaRocaMaquina.classList.add("seleccionada");
-        juego(ficha__seleccionada, decisionDeLaMaquina)
-
+        
     } else {
         fichaTijeraMaquina.classList.add("seleccionada");
     }
+
+    juego(ficha__seleccionada, decisionDeLaMaquina);
 
 }
 
