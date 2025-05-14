@@ -98,29 +98,38 @@ function seleccionDeLaMaquina(){
     //Numero random
     let numeroRandom: number = Math.floor(Math.random() * 3);
     let decisionDeLaMaquina: string = arrayDeFichas[numeroRandom];
-    return decisionDeLaMaquina;
+    
+    console.log(decisionDeLaMaquina)
+
+    const fichaPapelMaquina = document.getElementById("papel__maquina__id") as HTMLDivElement;
+    const fichaTijeraMaquina = document.getElementById("tijera__maquina__id") as HTMLDivElement;
+    const fichaRocaMaquina = document.getElementById("tijera__maquina__id") as HTMLDivElement;
+
+    if(decisionDeLaMaquina === "papel"){
+        fichaPapelMaquina.classList.add("seleccionada");
+    } else if( decisionDeLaMaquina === "roca"){
+        fichaTijeraMaquina.classList.add("seleccionada");
+    } else {
+        fichaRocaMaquina.classList.add("seleccionada");
+    }
+
+
+    
 
 }
 
 const ficha__elegida = seleccionDeLaMaquina();
+console.log(ficha__elegida)
 
-const fichaPapelMaquina = document.getElementById("papel__maquina__id") as HTMLDivElement;
-const fichaTijeraMaquina = document.getElementById("tijera__maquina__id") as HTMLDivElement;
-const fichaRocaMaquina = document.getElementById("tijera__maquina__id") as HTMLDivElement;
+
+
+function mostrarFichaSeleccionada(ficha : string){
+
+
+}
 
 //Mostrar la ficha seleccionada por la maquina
-if(ficha__elegida === "papel"){
 
-    fichaPapelMaquina.classList.add("seleccionada");
-
-} else if( ficha__elegida === "roca"){
-
-    fichaTijeraMaquina.classList.add("seleccionada");
-
-} else {
-
-    fichaRocaMaquina.classList.add("seleccionada");
-}
 
 
 

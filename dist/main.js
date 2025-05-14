@@ -68,22 +68,25 @@ function seleccionDeLaMaquina() {
     //Numero random
     let numeroRandom = Math.floor(Math.random() * 3);
     let decisionDeLaMaquina = arrayDeFichas[numeroRandom];
-    return decisionDeLaMaquina;
+    console.log(decisionDeLaMaquina);
+    const fichaPapelMaquina = document.getElementById("papel__maquina__id");
+    const fichaTijeraMaquina = document.getElementById("tijera__maquina__id");
+    const fichaRocaMaquina = document.getElementById("tijera__maquina__id");
+    if (decisionDeLaMaquina === "papel") {
+        fichaPapelMaquina.classList.add("seleccionada");
+    }
+    else if (decisionDeLaMaquina === "roca") {
+        fichaTijeraMaquina.classList.add("seleccionada");
+    }
+    else {
+        fichaRocaMaquina.classList.add("seleccionada");
+    }
 }
 const ficha__elegida = seleccionDeLaMaquina();
-const fichaPapelMaquina = document.getElementById("papel__maquina__id");
-const fichaTijeraMaquina = document.getElementById("tijera__maquina__id");
-const fichaRocaMaquina = document.getElementById("tijera__maquina__id");
+console.log(ficha__elegida);
+function mostrarFichaSeleccionada(ficha) {
+}
 //Mostrar la ficha seleccionada por la maquina
-if (ficha__elegida === "papel") {
-    fichaPapelMaquina.classList.add("seleccionada");
-}
-else if (ficha__elegida === "roca") {
-    fichaTijeraMaquina.classList.add("seleccionada");
-}
-else {
-    fichaRocaMaquina.classList.add("seleccionada");
-}
 //Funcion que depende la respuesta de la seleccion de la maquina, mostrara la ficha correspondiente y mostrara el resultado
 //Una vez la ficha elegida, crear el algoritmo de condiciones donde uno le gane al otro y asi 
 //Crear una variable nueva que diga el texto de si ganas o perdiste+

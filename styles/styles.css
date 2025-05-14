@@ -210,14 +210,31 @@
     display: none;
 }
 
+.papel__maquina.seleccionada{
+    display: flex;
+    top: 20%; right: 50%;
+
+}
+
 .tijera__maquina{
     display: none;
 }
+/*
+.tijera__maquina.seleccionada{
+    display: flex;
+    top: 20%; right: 50%;
 
+}
+*/
 .roca__maquina{
     display: none;
 }
 
+.roca__maquina.seleccionada{
+    display: flex;
+    top: 20%; right: 50%;
+
+}
 
 /*--------------Seccion de reglas del juego--------------*/
 
