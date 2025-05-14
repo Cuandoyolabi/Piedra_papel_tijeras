@@ -58,7 +58,7 @@ fichaRoca.addEventListener('click', () => {
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
     
-    ficha__seleccionada = "roca";
+    ficha__seleccionada = "piedra";
     console.log(ficha__seleccionada)
     seleccionDeFicha();
     seleccionDeLaMaquina();
@@ -110,7 +110,7 @@ function seleccionDeLaMaquina(){
 
     } else if( decisionDeLaMaquina === "piedra"){
         fichaRocaMaquina.classList.add("seleccionada");
-        
+
     } else {
         fichaTijeraMaquina.classList.add("seleccionada");
     }
@@ -121,31 +121,26 @@ function seleccionDeLaMaquina(){
 
 function juego(ficha__del__jugador: string, ficha__maquina: string){
 
+    if(ficha__del__jugador === ficha__maquina){
+        console.log("empate");
+    }
+
     if(ficha__del__jugador === "papel" && ficha__maquina === "tijera"){
         console.log("Perdiste");
     } else if(ficha__del__jugador === "papel" && ficha__maquina === "piedra"){
         console.log("ganaste")
-    } else if(ficha__del__jugador === "papel" && ficha__maquina === "papel"){
-        console.log("empate")
     } else if(ficha__del__jugador === "tijera" && ficha__maquina === "papel"){
         console.log("ganaste")
-    } else if(ficha__del__jugador === "tijera" && ficha__maquina === "tijera"){
-        console.log("empate")
     } else if(ficha__del__jugador === "tijera" && ficha__maquina === "piedra"){
         console.log("perdiste")
-    } else if(ficha__del__jugador === "roca" && ficha__maquina === "tijera"){
+    } else if(ficha__del__jugador === "piedra" && ficha__maquina === "tijera"){
         console.log("ganaste")
-    } else if(ficha__del__jugador === "roca" && ficha__maquina === "piedra"){
-        console.log("empate")
-    } else if(ficha__del__jugador === "roca" && ficha__maquina === "papel"){
+    } else if(ficha__del__jugador === "piedra" && ficha__maquina === "papel"){
         console.log("perdiste")
     }
 }
 
-/*
-const ficha__elegida = seleccionDeLaMaquina();
-console.log(ficha__elegida)
-*/
+
 
 
 
