@@ -92,6 +92,9 @@ function juego(ficha__del__jugador, ficha__maquina) {
     jugar__de__nuevoBoton.classList.add("jugar__de__nuevo");
     jugar__de__nuevoBoton.id = 'jugar__de__nuevo__id';
     contendor__juego__interseccion__id.appendChild(jugar__de__nuevoBoton);
+    jugar__de__nuevoBoton.addEventListener('click', () => {
+        reinicioDeJuego();
+    });
     //Texto de aviso
     const resultado__texto = document.createElement("h1");
     resultado__texto.classList.add("resultado__de__juego");
@@ -118,6 +121,14 @@ function juego(ficha__del__jugador, ficha__maquina) {
 }
 //Funcion que reinicia el juego para probar de nuevo
 function reinicioDeJuego() {
+    const triangulo = document.getElementById("triangulo");
+    const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id");
+    //Retorno de la interfaz
+    fichaPapel.classList.remove('active');
+    fichaRoca.classList.remove('active');
+    fichaTijera.classList.remove('active');
+    triangulo.classList.remove("hidden");
+    contendor__juego__interseccion__id.classList.remove('espacio__extra');
 }
 //Funcion que sube o baja tu puntaje dependiendo de tus jugadas
 function puntaje() {

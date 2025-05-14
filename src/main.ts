@@ -126,14 +126,18 @@ function juego(ficha__del__jugador: string, ficha__maquina: string){
     const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id") as HTMLDivElement;
 
     //Boton de reinicio
-    const jugar__de__nuevoBoton = document.createElement("button");
+    const jugar__de__nuevoBoton = document.createElement("button") as HTMLButtonElement;
     jugar__de__nuevoBoton.textContent = "PLAY AGAIN";
     jugar__de__nuevoBoton.classList.add("jugar__de__nuevo");
     jugar__de__nuevoBoton.id = 'jugar__de__nuevo__id';
     contendor__juego__interseccion__id.appendChild(jugar__de__nuevoBoton);
 
+    jugar__de__nuevoBoton.addEventListener('click', () => {
+        reinicioDeJuego();
+    });
+
     //Texto de aviso
-    const resultado__texto = document.createElement("h1");
+    const resultado__texto = document.createElement("h1") as HTMLParagraphElement;
     resultado__texto.classList.add("resultado__de__juego");
 
     if(ficha__del__jugador === ficha__maquina){
@@ -161,14 +165,20 @@ function juego(ficha__del__jugador: string, ficha__maquina: string){
         resultado__texto.textContent = "YOU LOSE";
         contendor__juego__interseccion__id.appendChild(resultado__texto);
     }
-
-
 }
 
 //Funcion que reinicia el juego para probar de nuevo
 function reinicioDeJuego(){
 
+    const triangulo = document.getElementById("triangulo") as HTMLImageElement;
+    const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id") as HTMLDivElement;
 
+    //Retorno de la interfaz
+    fichaPapel.classList.remove('active');
+    fichaRoca.classList.remove('active');
+    fichaTijera.classList.remove('active');
+    triangulo.classList.remove("hidden");
+    contendor__juego__interseccion__id.classList.remove('espacio__extra');
 
 }
 
