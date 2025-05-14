@@ -88,6 +88,8 @@ function seleccionDeFicha(){
     espacioVacio.classList.add("espacio__vacio");
     contendor__juego__interseccion__id.appendChild(espacioVacio);
 
+    contendor__juego__interseccion__id.classList.add("espacio__extra");
+
 }
 
 //Funcion que elige una ficha del array de manera aleatoria
@@ -121,71 +123,59 @@ function seleccionDeLaMaquina(){
 
 function juego(ficha__del__jugador: string, ficha__maquina: string){
 
+    const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id") as HTMLDivElement;
+
+    //Boton de reinicio
+    const jugar__de__nuevoBoton = document.createElement("button");
+    jugar__de__nuevoBoton.textContent = "PLAY AGAIN";
+    jugar__de__nuevoBoton.classList.add("jugar__de__nuevo");
+    jugar__de__nuevoBoton.id = 'jugar__de__nuevo__id';
+    contendor__juego__interseccion__id.appendChild(jugar__de__nuevoBoton);
+
+    //Texto de aviso
+    const resultado__texto = document.createElement("h1");
+    resultado__texto.classList.add("resultado__de__juego");
+
     if(ficha__del__jugador === ficha__maquina){
-        console.log("empate");
+
+        resultado__texto.textContent = "DRAW";
+        contendor__juego__interseccion__id.appendChild(resultado__texto);
+        return;
     }
 
-    if(ficha__del__jugador === "papel" && ficha__maquina === "tijera"){
-        console.log("Perdiste");
-    } else if(ficha__del__jugador === "papel" && ficha__maquina === "piedra"){
-        console.log("ganaste")
-    } else if(ficha__del__jugador === "tijera" && ficha__maquina === "papel"){
-        console.log("ganaste")
-    } else if(ficha__del__jugador === "tijera" && ficha__maquina === "piedra"){
-        console.log("perdiste")
-    } else if(ficha__del__jugador === "piedra" && ficha__maquina === "tijera"){
-        console.log("ganaste")
-    } else if(ficha__del__jugador === "piedra" && ficha__maquina === "papel"){
-        console.log("perdiste")
+    const ganaContra: Record<string, string> = {
+
+        piedra: "tijera",
+        papel: "piedra",
+        tijera: "papel"
+
     }
+
+    if(ganaContra[ficha__del__jugador] === ficha__maquina){
+        //Ganaste
+        resultado__texto.textContent = "YOU WIN";
+        contendor__juego__interseccion__id.appendChild(resultado__texto);
+
+    } else {
+        //Perdiste
+        resultado__texto.textContent = "YOU LOSE";
+        contendor__juego__interseccion__id.appendChild(resultado__texto);
+    }
+
+
 }
 
+//Funcion que reinicia el juego para probar de nuevo
+function reinicioDeJuego(){
 
 
 
+}
+
+//Funcion que sube o baja tu puntaje dependiendo de tus jugadas
+function puntaje(){
 
 
 
-//Funcion que depende la respuesta de la seleccion de la maquina, mostrara la ficha correspondiente y mostrara el resultado
-
-
-
-//Una vez la ficha elegida, crear el algoritmo de condiciones donde uno le gane al otro y asi 
-
-//Crear una variable nueva que diga el texto de si ganas o perdiste+
-
-//Crear un boton que reinicie el juego
-
-
-//Creando la logica de juego
-
-// Necesito que la maquina seleccione uno de estos 3 de forma aleatoria
-
-
-
-
-
-//2- Que la maquina elija un ficha de las 3 de una forma random
-
-
-//3-Algoritmo que determina quien gano o perdio, si perdio baja el score y si gana, sube
-
-
-//4-Crear un boton de reinicio para jugar otra vez
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 

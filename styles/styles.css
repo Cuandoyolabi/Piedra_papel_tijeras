@@ -97,7 +97,10 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    border: 1px solid red;
+}
+
+.contendor__juego__interseccion.espacio__extra{
+    height: 560px;
 }
 
 .contenedor__juego__triangulo{
@@ -237,6 +240,30 @@
     margin: auto;
     z-index: 5;
 }
+
+.resultado__de__juego{
+    color: white;
+    position: absolute;
+    bottom: 14%;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.jugar__de__nuevo{
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    color: var(--Dark-Text);
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+
 
 /*--------------Seccion de reglas del juego--------------*/
 
