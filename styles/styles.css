@@ -205,6 +205,19 @@
     background-color: var(--Dark-Text)
 }
 
+/*--------------Elementos agregados desde JavaScript (Etapa 3) -------------*/
+.papel__maquina{
+    display: none;
+}
+
+.tijera__maquina{
+    display: none;
+}
+
+.roca__maquina{
+    display: none;
+}
+
 
 /*--------------Seccion de reglas del juego--------------*/
 
