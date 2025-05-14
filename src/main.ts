@@ -107,29 +107,46 @@ function seleccionDeLaMaquina(){
 
     if(decisionDeLaMaquina === "papel"){
         fichaPapelMaquina.classList.add("seleccionada");
-    } else if( decisionDeLaMaquina === "roca"){
-        fichaTijeraMaquina.classList.add("seleccionada");
-    } else {
+        juego(ficha__seleccionada, decisionDeLaMaquina);
+
+
+    } else if( decisionDeLaMaquina === "piedra"){
         fichaRocaMaquina.classList.add("seleccionada");
+        juego(ficha__seleccionada, decisionDeLaMaquina)
+
+    } else {
+        fichaTijeraMaquina.classList.add("seleccionada");
     }
 
-
-    
-
 }
 
+function juego(ficha__del__jugador: string, ficha__maquina: string){
+
+    if(ficha__del__jugador === "papel" && ficha__maquina === "tijera"){
+        console.log("Perdiste");
+    } else if(ficha__del__jugador === "papel" && ficha__maquina === "piedra"){
+        console.log("ganaste")
+    } else if(ficha__del__jugador === "papel" && ficha__maquina === "papel"){
+        console.log("empate")
+    } else if(ficha__del__jugador === "tijera" && ficha__maquina === "papel"){
+        console.log("ganaste")
+    } else if(ficha__del__jugador === "tijera" && ficha__maquina === "tijera"){
+        console.log("empate")
+    } else if(ficha__del__jugador === "tijera" && ficha__maquina === "piedra"){
+        console.log("perdiste")
+    } else if(ficha__del__jugador === "roca" && ficha__maquina === "tijera"){
+        console.log("ganaste")
+    } else if(ficha__del__jugador === "roca" && ficha__maquina === "piedra"){
+        console.log("empate")
+    } else if(ficha__del__jugador === "roca" && ficha__maquina === "papel"){
+        console.log("perdiste")
+    }
+}
+
+/*
 const ficha__elegida = seleccionDeLaMaquina();
 console.log(ficha__elegida)
-
-
-
-function mostrarFichaSeleccionada(ficha : string){
-
-
-}
-
-//Mostrar la ficha seleccionada por la maquina
-
+*/
 
 
 

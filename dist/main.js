@@ -74,19 +74,49 @@ function seleccionDeLaMaquina() {
     const fichaRocaMaquina = document.getElementById("tijera__maquina__id");
     if (decisionDeLaMaquina === "papel") {
         fichaPapelMaquina.classList.add("seleccionada");
+        juego(ficha__seleccionada, decisionDeLaMaquina);
     }
-    else if (decisionDeLaMaquina === "roca") {
-        fichaTijeraMaquina.classList.add("seleccionada");
+    else if (decisionDeLaMaquina === "piedra") {
+        fichaRocaMaquina.classList.add("seleccionada");
+        juego(ficha__seleccionada, decisionDeLaMaquina);
     }
     else {
-        fichaRocaMaquina.classList.add("seleccionada");
+        fichaTijeraMaquina.classList.add("seleccionada");
     }
 }
-const ficha__elegida = seleccionDeLaMaquina();
-console.log(ficha__elegida);
-function mostrarFichaSeleccionada(ficha) {
+function juego(ficha__del__jugador, ficha__maquina) {
+    if (ficha__del__jugador === "papel" && ficha__maquina === "tijera") {
+        console.log("Perdiste");
+    }
+    else if (ficha__del__jugador === "papel" && ficha__maquina === "piedra") {
+        console.log("ganaste");
+    }
+    else if (ficha__del__jugador === "papel" && ficha__maquina === "papel") {
+        console.log("empate");
+    }
+    else if (ficha__del__jugador === "tijera" && ficha__maquina === "papel") {
+        console.log("ganaste");
+    }
+    else if (ficha__del__jugador === "tijera" && ficha__maquina === "tijera") {
+        console.log("empate");
+    }
+    else if (ficha__del__jugador === "tijera" && ficha__maquina === "piedra") {
+        console.log("perdiste");
+    }
+    else if (ficha__del__jugador === "roca" && ficha__maquina === "tijera") {
+        console.log("ganaste");
+    }
+    else if (ficha__del__jugador === "roca" && ficha__maquina === "piedra") {
+        console.log("empate");
+    }
+    else if (ficha__del__jugador === "roca" && ficha__maquina === "papel") {
+        console.log("perdiste");
+    }
 }
-//Mostrar la ficha seleccionada por la maquina
+/*
+const ficha__elegida = seleccionDeLaMaquina();
+console.log(ficha__elegida)
+*/
 //Funcion que depende la respuesta de la seleccion de la maquina, mostrara la ficha correspondiente y mostrara el resultado
 //Una vez la ficha elegida, crear el algoritmo de condiciones donde uno le gane al otro y asi 
 //Crear una variable nueva que diga el texto de si ganas o perdiste+

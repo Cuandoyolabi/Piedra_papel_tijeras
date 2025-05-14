@@ -212,20 +212,21 @@
 
 .papel__maquina.seleccionada{
     display: flex;
-    top: 20%; right: 50%;
-
+    top: 20%; left: 58%;
+    z-index: 5;
 }
 
 .tijera__maquina{
     display: none;
 }
-/*
+
 .tijera__maquina.seleccionada{
     display: flex;
-    top: 20%; right: 50%;
+    top: 20%; left: 58%;
+    z-index: 5;
 
 }
-*/
+
 .roca__maquina{
     display: none;
 }
