@@ -17,9 +17,6 @@ cerrarReglas.addEventListener('click', () => {
 
 });
 
-// Logica de juego
-
-
 // 1-Poder seleccionar una ficha y que las demas fichas desaparezcan
 const fichaPapel = document.getElementById("papel") as HTMLDivElement;
 const fichaTijera = document.getElementById("tijera") as HTMLDivElement;
@@ -38,7 +35,7 @@ fichaPapel.addEventListener('click', () => {
     
     console.log(ficha__seleccionada);
     seleccionDeFicha();
-    
+    seleccionDeLaMaquina();
 
 });
 
@@ -51,6 +48,7 @@ fichaTijera.addEventListener('click', () => {
     ficha__seleccionada = "tijera";
     console.log(ficha__seleccionada)
     seleccionDeFicha();
+    seleccionDeLaMaquina();
 
 });
 
@@ -63,8 +61,9 @@ fichaRoca.addEventListener('click', () => {
     ficha__seleccionada = "roca";
     console.log(ficha__seleccionada)
     seleccionDeFicha();
+    seleccionDeLaMaquina();
 
-})
+});
 
 //Funcion que cambia la interfaz del programa y deja la ficha que el jugador selecciono
 function seleccionDeFicha(){
@@ -99,29 +98,27 @@ function seleccionDeLaMaquina(){
     //Numero random
     let numeroRandom: number = Math.floor(Math.random() * 3);
     let decisionDeLaMaquina: string = arrayDeFichas[numeroRandom];
-    console.log(decisionDeLaMaquina)
-
-    if(decisionDeLaMaquina === "papel"){
-        console.log("Papelito")
-    } else if (decisionDeLaMaquina === "piedra"){
-        console.log("Roquita")
-    } else {
-        console.log("tijerita")
-    }
-
-
-    //Iterar sobre el array de fichas
-
-
-    //Una vez la ficha elegida, crear el algoritmo de condiciones donde uno le gane al otro y asi 
-
-    //Crear una variable nueva que diga el texto de si ganas o perdiste+
-
-    //Crear un boton que reinicie el juego
+    return decisionDeLaMaquina;
 
 }
 
-seleccionDeLaMaquina();
+const ficha__elegida = seleccionDeLaMaquina();
+
+console.log(ficha__elegida)
+
+
+
+
+//Funcion que depende la respuesta de la seleccion de la maquina, mostrara la ficha correspondiente y mostrara el resultado
+
+
+
+//Una vez la ficha elegida, crear el algoritmo de condiciones donde uno le gane al otro y asi 
+
+//Crear una variable nueva que diga el texto de si ganas o perdiste+
+
+//Crear un boton que reinicie el juego
+
 
 //Creando la logica de juego
 
