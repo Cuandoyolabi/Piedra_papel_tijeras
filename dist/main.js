@@ -62,14 +62,26 @@ function seleccionDeFicha() {
 }
 //Funcion que elige una ficha del array de manera aleatoria
 function seleccionDeLaMaquina() {
-    let decisionDeLaMaquina = "";
-    let decisiones = ["piedra", "papel", "tijera"];
-    //Crear un numero random
+    let arrayDeFichas = ["piedra", "papel", "tijera"];
+    //Numero random
+    let numeroRandom = Math.floor(Math.random() * 3);
+    let decisionDeLaMaquina = arrayDeFichas[numeroRandom];
+    console.log(decisionDeLaMaquina);
+    if (decisionDeLaMaquina === "papel") {
+        console.log("Papelito");
+    }
+    else if (decisionDeLaMaquina === "piedra") {
+        console.log("Roquita");
+    }
+    else {
+        console.log("tijerita");
+    }
     //Iterar sobre el array de fichas
     //Una vez la ficha elegida, crear el algoritmo de condiciones donde uno le gane al otro y asi 
     //Crear una variable nueva que diga el texto de si ganas o perdiste+
     //Crear un boton que reinicie el juego
 }
+seleccionDeLaMaquina();
 //Creando la logica de juego
 // Necesito que la maquina seleccione uno de estos 3 de forma aleatoria
 //2- Que la maquina elija un ficha de las 3 de una forma random
