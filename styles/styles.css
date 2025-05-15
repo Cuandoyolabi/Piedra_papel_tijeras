@@ -348,8 +348,8 @@
     /* ---------------Juego-------------------- */
 
     .contenedor__juego{
-        top: 290px;
-        height: 50%;
+        top: 250px;
+        height: 55%;
         border: 1px solid red;
     }
 
@@ -390,7 +390,7 @@
 
     .roca{
         top: 220px;
-        left: 100px;
+        left: 89px;
     }
 
     .ficha__icono{
@@ -423,29 +423,40 @@
         top: auto; left: 0;
     }
 
-    .fichaPapelMaquina.seleccionado{
+    /* ------Juego (Segunda parte) fichas de la maquina ------- */
+
+    .papel__maquina.seleccionada{
         width: 280px;
         height: 280px;
+        top: auto; right: 0;
     }
 
-    .fichaTijeraMaquina{
+    .tijera__maquina.seleccionada{
         width: 280px;
         height: 280px;
+        top: auto; right: 0;
     }
 
-    .fichaRocaMaquina.seleccionado{
+    .roca__maquina.seleccionada{
         width: 280px;
         height: 280px;
+        top: auto; left: auto;
     }
 
     .ficha__interior__papel__maquina.seleccionado{
-        width: 200px;
-        height: 200px;
+        width: 215px;
+        height: 215px;
     }
 
+    .ficha__interior__tijera__maquina.seleccionado{
+        width: 215px;
+        height: 215px;
+    }
 
-
-
+    .ficha__interior__roca__maquina.seleccionado{
+        width: 215px;
+        height: 215px;
+    }
 
     /*----------- Seccion de reglas-------------------------- */
 

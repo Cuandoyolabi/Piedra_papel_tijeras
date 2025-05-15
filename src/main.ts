@@ -25,8 +25,8 @@ const fichaRoca = document.getElementById("roca") as HTMLDivElement;
 
 //Se llaman al interior de las fichas para agregarles un diferente tamaño en modo responsive
 const ficha__interior__papel = document.getElementById("ficha__interior__papel") as HTMLDivElement;
-const tijera__interior = document.getElementById("papel__interior") as HTMLDivElement;
-const roca__interior = document.getElementById("papel__interior") as HTMLDivElement;
+const ficha__interior__tijera = document.getElementById("ficha__interior__tijera") as HTMLDivElement;
+const ficha__interior__roca = document.getElementById("ficha__interior__roca") as HTMLDivElement;
 
 //Ficha de juego ineterior
 const ficha__interior = document.getElementById("ficha__de__juego__interior__id") as HTMLDivElement;
@@ -55,8 +55,7 @@ fichaPapel.addEventListener('click', () => {
 fichaTijera.addEventListener('click', () => {
 
     fichaTijera.classList.add("seleccionado");
-    ficha__interior.classList.add("seleccionado");
-
+    ficha__interior__tijera.classList.add("seleccionado");
 
     fichaPapel.classList.add("active");
     fichaRoca.classList.add("active");
@@ -74,7 +73,7 @@ fichaTijera.addEventListener('click', () => {
 fichaRoca.addEventListener('click', () => {
 
     fichaRoca.classList.add("seleccionado");
-    ficha__interior.classList.add("seleccionado");
+    ficha__interior__roca.classList.add("seleccionado");
 
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
@@ -141,8 +140,12 @@ function seleccionDeLaMaquina(){
     let decisionDeLaMaquina: string = arrayDeFichas[numeroRandom];
     
     if(decisionDeLaMaquina === "papel"){
+        console.log("Funcionando paso 1")
         fichaPapelMaquina.classList.add("seleccionada");
+        console.log("Funcionando paso 2")
         ficha__interior__papel__maquina.classList.add("seleccionado");
+        console.log("Funcionando paso 3")
+
     } else if( decisionDeLaMaquina === "piedra"){
         fichaRocaMaquina.classList.add("seleccionada");
         ficha__interior__roca__maquina.classList.add("seleccionado");

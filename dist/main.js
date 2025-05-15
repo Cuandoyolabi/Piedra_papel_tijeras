@@ -18,8 +18,8 @@ const fichaTijera = document.getElementById("tijera");
 const fichaRoca = document.getElementById("roca");
 //Se llaman al interior de las fichas para agregarles un diferente tamaño en modo responsive
 const ficha__interior__papel = document.getElementById("ficha__interior__papel");
-const tijera__interior = document.getElementById("papel__interior");
-const roca__interior = document.getElementById("papel__interior");
+const ficha__interior__tijera = document.getElementById("ficha__interior__tijera");
+const ficha__interior__roca = document.getElementById("ficha__interior__roca");
 //Ficha de juego ineterior
 const ficha__interior = document.getElementById("ficha__de__juego__interior__id");
 //Crear una variable que se llene cuando elija una figura
@@ -37,7 +37,7 @@ fichaPapel.addEventListener('click', () => {
 });
 fichaTijera.addEventListener('click', () => {
     fichaTijera.classList.add("seleccionado");
-    ficha__interior.classList.add("seleccionado");
+    ficha__interior__tijera.classList.add("seleccionado");
     fichaPapel.classList.add("active");
     fichaRoca.classList.add("active");
     ficha__seleccionada = "tijera";
@@ -48,7 +48,7 @@ fichaTijera.addEventListener('click', () => {
 });
 fichaRoca.addEventListener('click', () => {
     fichaRoca.classList.add("seleccionado");
-    ficha__interior.classList.add("seleccionado");
+    ficha__interior__roca.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
     ficha__seleccionada = "piedra";
@@ -95,8 +95,11 @@ function seleccionDeLaMaquina() {
     let numeroRandom = Math.floor(Math.random() * 3);
     let decisionDeLaMaquina = arrayDeFichas[numeroRandom];
     if (decisionDeLaMaquina === "papel") {
+        console.log("Funcionando paso 1");
         fichaPapelMaquina.classList.add("seleccionada");
+        console.log("Funcionando paso 2");
         ficha__interior__papel__maquina.classList.add("seleccionado");
+        console.log("Funcionando paso 3");
     }
     else if (decisionDeLaMaquina === "piedra") {
         fichaRocaMaquina.classList.add("seleccionada");
