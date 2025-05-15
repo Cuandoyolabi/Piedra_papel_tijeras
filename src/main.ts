@@ -168,11 +168,15 @@ function juego(ficha__del__jugador: string, ficha__maquina: string){
         //Ganaste
         resultado__texto.textContent = "YOU WIN";
         contendor__juego__interseccion__id.appendChild(resultado__texto);
+        let win: string = "WIN";
+        puntaje(win);
 
     } else {
         //Perdiste
         resultado__texto.textContent = "YOU LOSE";
         contendor__juego__interseccion__id.appendChild(resultado__texto);
+        let lose: string = "LOSE";
+        puntaje(lose);
     }
 }
 
@@ -206,9 +210,36 @@ function reinicioDeJuego(){
 
 }
 
-//Funcion que sube o baja tu puntaje dependiendo de tus jugadas
-function puntaje(){
 
+//Funcion que sube o baja tu puntaje dependiendo de tus jugadas
+function puntaje(variable: string){
+    
+    const puntaje = document.getElementById("puntaje__id") as HTMLParagraphElement;
+    
+    console.log("Esta funcionando");
+
+    if(variable === "WIN"){
+        
+        //Esta variable convierte el elemento texto a numero
+        // pero antes usa textContent para pasar de <h1>0</h1> a "0"
+        //  y verifica que sea un string o sino, lo convierte a 0 y lo pasa a decimal
+        let valorNumerico = parseInt(puntaje.textContent || "0", 10);
+        valorNumerico++;
+        puntaje.textContent = valorNumerico.toString();
+
+    } else if(variable === "LOSE") {
+        
+        let valorNumerico = parseInt(puntaje.textContent || "0", 10);
+
+        //Si el numero es 0, no bajara, porque no podemos poner -1 al jugador
+        if(valorNumerico === 0){
+            return;
+        }
+
+        valorNumerico--;
+        puntaje.textContent = valorNumerico.toString();
+
+    }
 
 
 }
