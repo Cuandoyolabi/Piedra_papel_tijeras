@@ -199,6 +199,11 @@ function reinicioDeJuego(){
     fichaTijeraMaquina.classList.remove("seleccionada");
     fichaRocaMaquina.classList.remove("seleccionada");
 
+    //Fichas a su lugar
+    fichaPapel.classList.remove("seleccionado");
+    fichaRoca.classList.remove("seleccionado");
+    fichaTijera.classList.remove("seleccionado");
+
 }
 
 //Funcion que sube o baja tu puntaje dependiendo de tus jugadas
