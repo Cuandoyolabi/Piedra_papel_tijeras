@@ -24,13 +24,9 @@ const fichaTijera = document.getElementById("tijera") as HTMLDivElement;
 const fichaRoca = document.getElementById("roca") as HTMLDivElement;
 
 //Se llaman al interior de las fichas para agregarles un diferente tamaño en modo responsive
-const papel__interior = document.getElementById("papel__interior") as HTMLDivElement;
+const ficha__interior__papel = document.getElementById("ficha__interior__papel") as HTMLDivElement;
 const tijera__interior = document.getElementById("papel__interior") as HTMLDivElement;
 const roca__interior = document.getElementById("papel__interior") as HTMLDivElement;
-
-const papel__interior__maquina = document.getElementById("papel__interior__maquina") as HTMLDivElement;
-const tijera__interior__maquina = document.getElementById("tijera__interior__maquina") as HTMLDivElement;
-const roca__interior__maquina = document.getElementById("roca__interior__maquina") as HTMLDivElement;
 
 //Ficha de juego ineterior
 const ficha__interior = document.getElementById("ficha__de__juego__interior__id") as HTMLDivElement;
@@ -41,7 +37,7 @@ let ficha__seleccionada: string = "";
 fichaPapel.addEventListener('click', () => {
 
     fichaPapel.classList.add("seleccionado");
-    ficha__interior.classList.add("seleccionado");
+    ficha__interior__papel.classList.add("seleccionado");
 
     fichaTijera.classList.add("active");
     fichaRoca.classList.add("active");
@@ -59,7 +55,8 @@ fichaPapel.addEventListener('click', () => {
 fichaTijera.addEventListener('click', () => {
 
     fichaTijera.classList.add("seleccionado");
-    tijera__interior.classList.add("selecionado");
+    ficha__interior.classList.add("seleccionado");
+
 
     fichaPapel.classList.add("active");
     fichaRoca.classList.add("active");
@@ -77,6 +74,8 @@ fichaTijera.addEventListener('click', () => {
 fichaRoca.addEventListener('click', () => {
 
     fichaRoca.classList.add("seleccionado");
+    ficha__interior.classList.add("seleccionado");
+
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
     
@@ -127,6 +126,11 @@ const fichaPapelMaquina = document.getElementById("papel__maquina__id") as HTMLD
 const fichaTijeraMaquina = document.getElementById("tijera__maquina__id") as HTMLDivElement;
 const fichaRocaMaquina = document.getElementById("roca__maquina__id") as HTMLDivElement;
 
+//Interior de las fichas de la maquina
+const ficha__interior__papel__maquina = document.getElementById("ficha__interior__papel__maquina") as HTMLDivElement;
+const ficha__interior__tijera__maquina = document.getElementById("ficha__interior__tijera__maquina") as HTMLDivElement;
+const ficha__interior__roca__maquina = document.getElementById("ficha__interior__roca__maquina") as HTMLDivElement;
+
 //Funcion que elige una ficha del array de manera aleatoria
 function seleccionDeLaMaquina(){
 
@@ -138,12 +142,13 @@ function seleccionDeLaMaquina(){
     
     if(decisionDeLaMaquina === "papel"){
         fichaPapelMaquina.classList.add("seleccionada");
-
+        ficha__interior__papel__maquina.classList.add("seleccionado");
     } else if( decisionDeLaMaquina === "piedra"){
         fichaRocaMaquina.classList.add("seleccionada");
-
+        ficha__interior__roca__maquina.classList.add("seleccionado");
     } else {
         fichaTijeraMaquina.classList.add("seleccionada");
+        ficha__interior__tijera__maquina.classList.add("seleccionado");
     }
 
     juego(ficha__seleccionada, decisionDeLaMaquina);

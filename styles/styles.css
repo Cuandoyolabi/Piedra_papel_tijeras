@@ -354,6 +354,7 @@
     }
 
     .contenedor__juego__interseccion{
+        height: 100%;
         border: 10px solid rgb(112, 252, 112);
     }
 
@@ -407,22 +408,39 @@
     .papel.seleccionado{
         width: 280px;
         height: 280px;
-
-        left: 0;
+        top: auto; left: 0;
     }
 
     .tijera.seleccionado{
         width: 280px;
         height: 280px;
-        top: 50%;
-        left: 10%;
+        top: auto; left: 0;
     }
 
     .roca.seleccionado{
         width: 280px;
         height: 280px;
-        top: 0;
-        left: 0;
+        top: auto; left: 0;
+    }
+
+    .fichaPapelMaquina.seleccionado{
+        width: 280px;
+        height: 280px;
+    }
+
+    .fichaTijeraMaquina{
+        width: 280px;
+        height: 280px;
+    }
+
+    .fichaRocaMaquina.seleccionado{
+        width: 280px;
+        height: 280px;
+    }
+
+    .ficha__interior__papel__maquina.seleccionado{
+        width: 200px;
+        height: 200px;
     }
 
 
