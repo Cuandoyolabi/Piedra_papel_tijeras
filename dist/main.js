@@ -67,6 +67,10 @@ function seleccionDeFicha() {
     contendor__juego__interseccion__id.appendChild(espacioVacio);
     contendor__juego__interseccion__id.classList.add("espacio__extra");
 }
+//Fichas que la maquia puede seleccionar
+const fichaPapelMaquina = document.getElementById("papel__maquina__id");
+const fichaTijeraMaquina = document.getElementById("tijera__maquina__id");
+const fichaRocaMaquina = document.getElementById("roca__maquina__id");
 //Funcion que elige una ficha del array de manera aleatoria
 function seleccionDeLaMaquina() {
     let arrayDeFichas = ["piedra", "papel", "tijera"];
@@ -74,9 +78,6 @@ function seleccionDeLaMaquina() {
     let numeroRandom = Math.floor(Math.random() * 3);
     let decisionDeLaMaquina = arrayDeFichas[numeroRandom];
     console.log(decisionDeLaMaquina);
-    const fichaPapelMaquina = document.getElementById("papel__maquina__id");
-    const fichaTijeraMaquina = document.getElementById("tijera__maquina__id");
-    const fichaRocaMaquina = document.getElementById("roca__maquina__id");
     if (decisionDeLaMaquina === "papel") {
         fichaPapelMaquina.classList.add("seleccionada");
     }
@@ -134,6 +135,15 @@ function reinicioDeJuego() {
     fichaTijera.classList.remove('active');
     triangulo.classList.remove("hidden");
     contendor__juego__interseccion__id.classList.remove('espacio__extra');
+    //Variables globales
+    eleccion__DelJugador__texto.remove();
+    eleccion__DeLaMaquina__texto.remove();
+    jugar__de__nuevoBoton.remove();
+    resultado__texto.remove();
+    espacioVacio.remove();
+    fichaPapelMaquina.classList.remove("seleccionada");
+    fichaTijeraMaquina.classList.remove("seleccionada");
+    fichaRocaMaquina.classList.remove("seleccionada");
 }
 //Funcion que sube o baja tu puntaje dependiendo de tus jugadas
 function puntaje() {

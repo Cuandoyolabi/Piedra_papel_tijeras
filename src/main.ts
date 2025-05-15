@@ -97,6 +97,11 @@ function seleccionDeFicha(){
 
 }
 
+//Fichas que la maquia puede seleccionar
+const fichaPapelMaquina = document.getElementById("papel__maquina__id") as HTMLDivElement;
+const fichaTijeraMaquina = document.getElementById("tijera__maquina__id") as HTMLDivElement;
+const fichaRocaMaquina = document.getElementById("roca__maquina__id") as HTMLDivElement;
+
 //Funcion que elige una ficha del array de manera aleatoria
 function seleccionDeLaMaquina(){
 
@@ -107,10 +112,6 @@ function seleccionDeLaMaquina(){
     let decisionDeLaMaquina: string = arrayDeFichas[numeroRandom];
     
     console.log(decisionDeLaMaquina)
-
-    const fichaPapelMaquina = document.getElementById("papel__maquina__id") as HTMLDivElement;
-    const fichaTijeraMaquina = document.getElementById("tijera__maquina__id") as HTMLDivElement;
-    const fichaRocaMaquina = document.getElementById("roca__maquina__id") as HTMLDivElement;
 
     if(decisionDeLaMaquina === "papel"){
         fichaPapelMaquina.classList.add("seleccionada");
@@ -187,6 +188,16 @@ function reinicioDeJuego(){
     fichaTijera.classList.remove('active');
     triangulo.classList.remove("hidden");
     contendor__juego__interseccion__id.classList.remove('espacio__extra');
+
+    //Variables globales
+    eleccion__DelJugador__texto.remove();
+    eleccion__DeLaMaquina__texto.remove();
+    jugar__de__nuevoBoton.remove();
+    resultado__texto.remove();
+    espacioVacio.remove();
+    fichaPapelMaquina.classList.remove("seleccionada");
+    fichaTijeraMaquina.classList.remove("seleccionada");
+    fichaRocaMaquina.classList.remove("seleccionada");
 
 }
 
