@@ -15,6 +15,13 @@ cerrarReglas.addEventListener('click', () => {
 const fichaPapel = document.getElementById("papel");
 const fichaTijera = document.getElementById("tijera");
 const fichaRoca = document.getElementById("roca");
+//Se llaman al interior de las fichas para agregarles un diferente tamaño en modo responsive
+const papel__interior = document.getElementById("papel__interior");
+const tijera__interior = document.getElementById("papel__interior");
+const roca__interior = document.getElementById("papel__interior");
+const papel__interior__maquina = document.getElementById("papel__interior__maquina");
+const tijera__interior__maquina = document.getElementById("tijera__interior__maquina");
+const roca__interior__maquina = document.getElementById("roca__interior__maquina");
 //Crear una variable que se llene cuando elija una figura
 let ficha__seleccionada = "";
 fichaPapel.addEventListener('click', () => {

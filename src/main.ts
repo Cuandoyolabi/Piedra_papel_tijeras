@@ -22,6 +22,16 @@ const fichaPapel = document.getElementById("papel") as HTMLDivElement;
 const fichaTijera = document.getElementById("tijera") as HTMLDivElement;
 const fichaRoca = document.getElementById("roca") as HTMLDivElement;
 
+//Se llaman al interior de las fichas para agregarles un diferente tamaño en modo responsive
+const papel__interior = document.getElementById("papel__interior") as HTMLDivElement;
+const tijera__interior = document.getElementById("papel__interior") as HTMLDivElement;
+const roca__interior = document.getElementById("papel__interior") as HTMLDivElement;
+
+const papel__interior__maquina = document.getElementById("papel__interior__maquina") as HTMLDivElement;
+const tijera__interior__maquina = document.getElementById("tijera__interior__maquina") as HTMLDivElement;
+const roca__interior__maquina = document.getElementById("roca__interior__maquina") as HTMLDivElement;
+
+
 //Crear una variable que se llene cuando elija una figura
 let ficha__seleccionada: string = "";
 
