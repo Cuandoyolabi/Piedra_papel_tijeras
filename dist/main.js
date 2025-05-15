@@ -44,21 +44,25 @@ fichaRoca.addEventListener('click', () => {
     seleccionDeFicha();
     seleccionDeLaMaquina();
 });
+//Variables y elementos que se introduciran mas tarde pero que es neesaria su creacion en global
+const eleccion__DelJugador__texto = document.createElement("p");
+const eleccion__DeLaMaquina__texto = document.createElement("p");
+const espacioVacio = document.createElement("div");
 //Funcion que cambia la interfaz del programa y deja la ficha que el jugador selecciono
 function seleccionDeFicha() {
     const triangulo = document.getElementById("triangulo");
     triangulo.classList.add("hidden");
     //Obtener ese div para insertar dos textos
     const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id");
-    const eleccion__DelJugador__texto = document.createElement("p");
+    //Tu seleccion
     eleccion__DelJugador__texto.textContent = "YOU PICKED";
     eleccion__DelJugador__texto.classList.add("jugador__texto");
     contendor__juego__interseccion__id.appendChild(eleccion__DelJugador__texto);
-    const eleccion__DeLaMaquina__texto = document.createElement("p");
+    //La eleccion de la maquina
     eleccion__DeLaMaquina__texto.textContent = "THE HOUSE PICKED";
     eleccion__DeLaMaquina__texto.classList.add("maquina__texto");
     contendor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
-    const espacioVacio = document.createElement("div");
+    //Contenedor visual
     espacioVacio.classList.add("espacio__vacio");
     contendor__juego__interseccion__id.appendChild(espacioVacio);
     contendor__juego__interseccion__id.classList.add("espacio__extra");
@@ -84,10 +88,12 @@ function seleccionDeLaMaquina() {
     }
     juego(ficha__seleccionada, decisionDeLaMaquina);
 }
+//Variables necesarias en global
+const jugar__de__nuevoBoton = document.createElement("button");
+const resultado__texto = document.createElement("h1");
 function juego(ficha__del__jugador, ficha__maquina) {
     const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id");
     //Boton de reinicio
-    const jugar__de__nuevoBoton = document.createElement("button");
     jugar__de__nuevoBoton.textContent = "PLAY AGAIN";
     jugar__de__nuevoBoton.classList.add("jugar__de__nuevo");
     jugar__de__nuevoBoton.id = 'jugar__de__nuevo__id';
@@ -96,7 +102,6 @@ function juego(ficha__del__jugador, ficha__maquina) {
         reinicioDeJuego();
     });
     //Texto de aviso
-    const resultado__texto = document.createElement("h1");
     resultado__texto.classList.add("resultado__de__juego");
     if (ficha__del__jugador === ficha__maquina) {
         resultado__texto.textContent = "DRAW";
