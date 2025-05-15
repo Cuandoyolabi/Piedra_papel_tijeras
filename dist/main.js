@@ -3,6 +3,7 @@ const botonReglas = document.getElementById('reglas__boton');
 const paginaReglas = document.getElementById('pagina__reglas__id');
 const modal__oscuro = document.getElementById('modal__oscuro__id');
 const cerrarReglas = document.getElementById('cerrar__boton');
+const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
 botonReglas.addEventListener('click', () => {
     modal__oscuro.classList.add('active');
     paginaReglas.classList.add('active');
@@ -22,24 +23,29 @@ const roca__interior = document.getElementById("papel__interior");
 const papel__interior__maquina = document.getElementById("papel__interior__maquina");
 const tijera__interior__maquina = document.getElementById("tijera__interior__maquina");
 const roca__interior__maquina = document.getElementById("roca__interior__maquina");
+//Ficha de juego ineterior
+const ficha__interior = document.getElementById("ficha__de__juego__interior__id");
 //Crear una variable que se llene cuando elija una figura
 let ficha__seleccionada = "";
 fichaPapel.addEventListener('click', () => {
     fichaPapel.classList.add("seleccionado");
+    ficha__interior.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaRoca.classList.add("active");
     ficha__seleccionada = "papel";
     //Funcion que se activara para el modo responsive (computadora)
-    const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
     contenedor__juego__interseccion__id.classList.add("modo__responsive");
     seleccionDeFicha();
     seleccionDeLaMaquina();
 });
 fichaTijera.addEventListener('click', () => {
     fichaTijera.classList.add("seleccionado");
+    tijera__interior.classList.add("selecionado");
     fichaPapel.classList.add("active");
     fichaRoca.classList.add("active");
     ficha__seleccionada = "tijera";
+    //Funcion que se activara para el modo responsive (computadora)
+    contenedor__juego__interseccion__id.classList.add("modo__responsive");
     seleccionDeFicha();
     seleccionDeLaMaquina();
 });
@@ -48,6 +54,8 @@ fichaRoca.addEventListener('click', () => {
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
     ficha__seleccionada = "piedra";
+    //Funcion que se activara para el modo responsive (computadora)
+    contenedor__juego__interseccion__id.classList.add("modo__responsive");
     seleccionDeFicha();
     seleccionDeLaMaquina();
 });

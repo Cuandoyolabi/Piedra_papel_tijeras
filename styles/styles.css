@@ -399,7 +399,26 @@
 
     /* -----------Juego (Segunda etapa) -------------------*/
 
+     .ficha__de__juego__interior.seleccionado{
+        width: 215px;
+        height: 215px;
+    }
+
     .papel.seleccionado{
+        width: 280px;
+        height: 280px;
+
+        left: 0;
+    }
+
+    .tijera.seleccionado{
+        width: 280px;
+        height: 280px;
+        top: 50%;
+        left: 10%;
+    }
+
+    .roca.seleccionado{
         width: 280px;
         height: 280px;
         top: 0;
