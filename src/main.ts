@@ -33,6 +33,10 @@ fichaPapel.addEventListener('click', () => {
     
     ficha__seleccionada = "papel";
     
+    //Funcion que se activara para el modo responsive (computadora)
+    const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id") as HTMLDivElement;
+    contenedor__juego__interseccion__id.classList.add("modo__responsive"); 
+
     seleccionDeFicha();
     seleccionDeLaMaquina();
 
@@ -75,23 +79,23 @@ function seleccionDeFicha(){
     triangulo.classList.add("hidden");
 
     //Obtener ese div para insertar dos textos
-    const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id") as HTMLDivElement;
+    const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id") as HTMLDivElement;
     
     //Tu seleccion
     eleccion__DelJugador__texto.textContent = "YOU PICKED";
     eleccion__DelJugador__texto.classList.add("jugador__texto");
-    contendor__juego__interseccion__id.appendChild(eleccion__DelJugador__texto);
+    contenedor__juego__interseccion__id.appendChild(eleccion__DelJugador__texto);
 
     //La eleccion de la maquina
     eleccion__DeLaMaquina__texto.textContent ="THE HOUSE PICKED";
     eleccion__DeLaMaquina__texto.classList.add("maquina__texto");
-    contendor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
+    contenedor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
 
     //Contenedor visual
     espacioVacio.classList.add("espacio__vacio");
-    contendor__juego__interseccion__id.appendChild(espacioVacio);
+    contenedor__juego__interseccion__id.appendChild(espacioVacio);
 
-    contendor__juego__interseccion__id.classList.add("espacio__extra");
+    contenedor__juego__interseccion__id.classList.add("espacio__extra");
 
 }
 
@@ -130,13 +134,13 @@ const resultado__texto = document.createElement("h1") as HTMLParagraphElement;
 
 function juego(ficha__del__jugador: string, ficha__maquina: string){
 
-    const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id") as HTMLDivElement;
+    const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id") as HTMLDivElement;
 
     //Boton de reinicio
     jugar__de__nuevoBoton.textContent = "PLAY AGAIN";
     jugar__de__nuevoBoton.classList.add("jugar__de__nuevo");
     jugar__de__nuevoBoton.id = 'jugar__de__nuevo__id';
-    contendor__juego__interseccion__id.appendChild(jugar__de__nuevoBoton);
+    contenedor__juego__interseccion__id.appendChild(jugar__de__nuevoBoton);
 
     jugar__de__nuevoBoton.addEventListener('click', () => {
         reinicioDeJuego();
@@ -148,7 +152,7 @@ function juego(ficha__del__jugador: string, ficha__maquina: string){
     if(ficha__del__jugador === ficha__maquina){
 
         resultado__texto.textContent = "DRAW";
-        contendor__juego__interseccion__id.appendChild(resultado__texto);
+        contenedor__juego__interseccion__id.appendChild(resultado__texto);
         return;
     }
 
@@ -163,14 +167,14 @@ function juego(ficha__del__jugador: string, ficha__maquina: string){
     if(ganaContra[ficha__del__jugador] === ficha__maquina){
         //Ganaste
         resultado__texto.textContent = "YOU WIN";
-        contendor__juego__interseccion__id.appendChild(resultado__texto);
+        contenedor__juego__interseccion__id.appendChild(resultado__texto);
         let win: string = "WIN";
         puntaje(win);
 
     } else {
         //Perdiste
         resultado__texto.textContent = "YOU LOSE";
-        contendor__juego__interseccion__id.appendChild(resultado__texto);
+        contenedor__juego__interseccion__id.appendChild(resultado__texto);
         let lose: string = "LOSE";
         puntaje(lose);
     }
@@ -180,14 +184,14 @@ function juego(ficha__del__jugador: string, ficha__maquina: string){
 function reinicioDeJuego(){
 
     const triangulo = document.getElementById("triangulo") as HTMLImageElement;
-    const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id") as HTMLDivElement;
+    const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id") as HTMLDivElement;
 
     //Retorno de la interfaz
     fichaPapel.classList.remove('active');
     fichaRoca.classList.remove('active');
     fichaTijera.classList.remove('active');
     triangulo.classList.remove("hidden");
-    contendor__juego__interseccion__id.classList.remove('espacio__extra');
+    contenedor__juego__interseccion__id.classList.remove('espacio__extra');
 
     //Variables globales
     eleccion__DelJugador__texto.remove();

@@ -22,6 +22,9 @@ fichaPapel.addEventListener('click', () => {
     fichaTijera.classList.add("active");
     fichaRoca.classList.add("active");
     ficha__seleccionada = "papel";
+    //Funcion que se activara para el modo responsive (computadora)
+    const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
+    contenedor__juego__interseccion__id.classList.add("modo__responsive");
     seleccionDeFicha();
     seleccionDeLaMaquina();
 });
@@ -50,19 +53,19 @@ function seleccionDeFicha() {
     const triangulo = document.getElementById("triangulo");
     triangulo.classList.add("hidden");
     //Obtener ese div para insertar dos textos
-    const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id");
+    const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
     //Tu seleccion
     eleccion__DelJugador__texto.textContent = "YOU PICKED";
     eleccion__DelJugador__texto.classList.add("jugador__texto");
-    contendor__juego__interseccion__id.appendChild(eleccion__DelJugador__texto);
+    contenedor__juego__interseccion__id.appendChild(eleccion__DelJugador__texto);
     //La eleccion de la maquina
     eleccion__DeLaMaquina__texto.textContent = "THE HOUSE PICKED";
     eleccion__DeLaMaquina__texto.classList.add("maquina__texto");
-    contendor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
+    contenedor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
     //Contenedor visual
     espacioVacio.classList.add("espacio__vacio");
-    contendor__juego__interseccion__id.appendChild(espacioVacio);
-    contendor__juego__interseccion__id.classList.add("espacio__extra");
+    contenedor__juego__interseccion__id.appendChild(espacioVacio);
+    contenedor__juego__interseccion__id.classList.add("espacio__extra");
 }
 //Fichas que la maquia puede seleccionar
 const fichaPapelMaquina = document.getElementById("papel__maquina__id");
@@ -89,12 +92,12 @@ function seleccionDeLaMaquina() {
 const jugar__de__nuevoBoton = document.createElement("button");
 const resultado__texto = document.createElement("h1");
 function juego(ficha__del__jugador, ficha__maquina) {
-    const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id");
+    const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
     //Boton de reinicio
     jugar__de__nuevoBoton.textContent = "PLAY AGAIN";
     jugar__de__nuevoBoton.classList.add("jugar__de__nuevo");
     jugar__de__nuevoBoton.id = 'jugar__de__nuevo__id';
-    contendor__juego__interseccion__id.appendChild(jugar__de__nuevoBoton);
+    contenedor__juego__interseccion__id.appendChild(jugar__de__nuevoBoton);
     jugar__de__nuevoBoton.addEventListener('click', () => {
         reinicioDeJuego();
     });
@@ -102,7 +105,7 @@ function juego(ficha__del__jugador, ficha__maquina) {
     resultado__texto.classList.add("resultado__de__juego");
     if (ficha__del__jugador === ficha__maquina) {
         resultado__texto.textContent = "DRAW";
-        contendor__juego__interseccion__id.appendChild(resultado__texto);
+        contenedor__juego__interseccion__id.appendChild(resultado__texto);
         return;
     }
     const ganaContra = {
@@ -113,14 +116,14 @@ function juego(ficha__del__jugador, ficha__maquina) {
     if (ganaContra[ficha__del__jugador] === ficha__maquina) {
         //Ganaste
         resultado__texto.textContent = "YOU WIN";
-        contendor__juego__interseccion__id.appendChild(resultado__texto);
+        contenedor__juego__interseccion__id.appendChild(resultado__texto);
         let win = "WIN";
         puntaje(win);
     }
     else {
         //Perdiste
         resultado__texto.textContent = "YOU LOSE";
-        contendor__juego__interseccion__id.appendChild(resultado__texto);
+        contenedor__juego__interseccion__id.appendChild(resultado__texto);
         let lose = "LOSE";
         puntaje(lose);
     }
@@ -128,13 +131,13 @@ function juego(ficha__del__jugador, ficha__maquina) {
 //Funcion que reinicia el juego para probar de nuevo
 function reinicioDeJuego() {
     const triangulo = document.getElementById("triangulo");
-    const contendor__juego__interseccion__id = document.getElementById("contendor__juego__interseccion__id");
+    const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
     //Retorno de la interfaz
     fichaPapel.classList.remove('active');
     fichaRoca.classList.remove('active');
     fichaTijera.classList.remove('active');
     triangulo.classList.remove("hidden");
-    contendor__juego__interseccion__id.classList.remove('espacio__extra');
+    contenedor__juego__interseccion__id.classList.remove('espacio__extra');
     //Variables globales
     eleccion__DelJugador__texto.remove();
     eleccion__DeLaMaquina__texto.remove();

@@ -89,7 +89,7 @@
     z-index: 2;
 }
 
-.contendor__juego__interseccion{
+.contenedor__juego__interseccion{
     width: 375px;
     height: 400px;
     position: relative;
@@ -97,6 +97,7 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
+    border: 1px solid red;
 }
 
 .contendor__juego__interseccion.espacio__extra{
@@ -320,7 +321,7 @@
     color: var(--Dark-Text);
 }
 
-@media (min-width: 1366px){
+@media (min-width: 1024px){
 
     .contenedor__conjunto{
         width: 50%;
@@ -344,15 +345,21 @@
         font-size: 50px;
     }
 
-    /* Juego */
+    /* ---------------Juego-------------------- */
 
     .contenedor__juego{
         top: 300px;
+        height: 45%;
+        border: 1px solid red;
     }
 
     .contenedor__juego__interseccion{
-        background-color: white;
-        border: 1px solid rgb(255, 238, 2);
+        border: 10px solid rgb(112, 252, 112);
+    }
+
+    .contenedor__juego__interseccion.modo__responsive{
+        width: 50%;
+        height: 100%;
     }
 
     .contenedor__juego__triangulo{
@@ -390,7 +397,14 @@
         height: 80px;
     }
 
-    /* Seccion de reglas */
+    /* -----------Juego (Segunda etapa) -------------------*/
+
+
+
+
+
+
+    /*----------- Seccion de reglas-------------------------- */
 
     .contentedor__reglas__button{
         bottom: 10%;
