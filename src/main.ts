@@ -33,7 +33,6 @@ fichaPapel.addEventListener('click', () => {
     
     ficha__seleccionada = "papel";
     
-    console.log(ficha__seleccionada);
     seleccionDeFicha();
     seleccionDeLaMaquina();
 
@@ -46,7 +45,6 @@ fichaTijera.addEventListener('click', () => {
     fichaRoca.classList.add("active");
     
     ficha__seleccionada = "tijera";
-    console.log(ficha__seleccionada)
     seleccionDeFicha();
     seleccionDeLaMaquina();
 
@@ -59,7 +57,7 @@ fichaRoca.addEventListener('click', () => {
     fichaPapel.classList.add("active");
     
     ficha__seleccionada = "piedra";
-    console.log(ficha__seleccionada)
+    
     seleccionDeFicha();
     seleccionDeLaMaquina();
 
@@ -111,8 +109,6 @@ function seleccionDeLaMaquina(){
     let numeroRandom: number = Math.floor(Math.random() * 3);
     let decisionDeLaMaquina: string = arrayDeFichas[numeroRandom];
     
-    console.log(decisionDeLaMaquina)
-
     if(decisionDeLaMaquina === "papel"){
         fichaPapelMaquina.classList.add("seleccionada");
 
@@ -215,12 +211,10 @@ function reinicioDeJuego(){
 function puntaje(variable: string){
     
     const puntaje = document.getElementById("puntaje__id") as HTMLParagraphElement;
-    
-    console.log("Esta funcionando");
 
     if(variable === "WIN"){
         
-        //Esta variable convierte el elemento texto a numero
+        //Esta variable convierte el elemento  de texto a numero
         // pero antes usa textContent para pasar de <h1>0</h1> a "0"
         //  y verifica que sea un string o sino, lo convierte a 0 y lo pasa a decimal
         let valorNumerico = parseInt(puntaje.textContent || "0", 10);
@@ -240,7 +234,5 @@ function puntaje(variable: string){
         puntaje.textContent = valorNumerico.toString();
 
     }
-
-
 }
 
