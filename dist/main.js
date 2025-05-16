@@ -111,6 +111,10 @@ function seleccionDeLaMaquina() {
 //Variables necesarias en global
 const jugar__de__nuevoBoton = document.createElement("button");
 const resultado__texto = document.createElement("h1");
+//Contenedores que aparecen cuando alguien gana y le dan un estilo al juego
+const circulo__num1 = document.createElement("div");
+const circulo__num2 = document.createElement("div");
+const circulo__num3 = document.createElement("div");
 function juego(ficha__del__jugador, ficha__maquina) {
     const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
     //Boton de reinicio
@@ -138,6 +142,13 @@ function juego(ficha__del__jugador, ficha__maquina) {
         resultado__texto.textContent = "YOU WIN";
         contenedor__juego__interseccion__id.appendChild(resultado__texto);
         let win = "WIN";
+        //Circulos que agregan diseño del lado ganador
+        circulo__num1.classList.add("circulo__num1__ganador");
+        contenedor__juego__interseccion__id.appendChild(circulo__num1);
+        circulo__num2.classList.add("circulo__num2__ganador");
+        contenedor__juego__interseccion__id.appendChild(circulo__num2);
+        circulo__num3.classList.add("circulo__num3__ganador");
+        contenedor__juego__interseccion__id.appendChild(circulo__num3);
         puntaje(win);
     }
     else {
@@ -145,6 +156,13 @@ function juego(ficha__del__jugador, ficha__maquina) {
         resultado__texto.textContent = "YOU LOSE";
         contenedor__juego__interseccion__id.appendChild(resultado__texto);
         let lose = "LOSE";
+        //Circulso que agregan diseño del lado perdedor
+        circulo__num1.classList.add("circulo__num1__perdedor");
+        contenedor__juego__interseccion__id.appendChild(circulo__num1);
+        circulo__num2.classList.add("circulo__num2__perdedor");
+        contenedor__juego__interseccion__id.appendChild(circulo__num2);
+        circulo__num3.classList.add("circulo__num3__perdedor");
+        contenedor__juego__interseccion__id.appendChild(circulo__num3);
         puntaje(lose);
     }
 }
@@ -176,6 +194,13 @@ function reinicioDeJuego() {
     ficha__interior__papel.classList.remove("seleccionado");
     ficha__interior__tijera.classList.remove("seleccionado");
     ficha__interior__roca.classList.remove("seleccionado");
+    //Circulos que agregan diseño
+    circulo__num1.remove();
+    circulo__num2.remove();
+    circulo__num3.remove();
+    circulo__num1.classList.remove("circulo__num1__ganador", "circulo__num1__perdedor");
+    circulo__num2.classList.remove("circulo__num2__ganador", "circulo__num2__perdedor");
+    circulo__num3.classList.remove("circulo__num3__ganador", "circulo__num3__perdedor");
 }
 //Funcion que sube o baja tu puntaje dependiendo de tus jugadas
 function puntaje(variable) {

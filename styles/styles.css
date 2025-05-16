@@ -121,7 +121,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    z-index: 0;
+    z-index: 1;
 }
 
 .ficha__de__juego__interior{
@@ -176,7 +176,7 @@
 .roca{
     background: radial-gradient(circle at center, var(--Rock-Gradient));
     top: 230px; left: 130px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
     box-shadow: -1px -14px 0px -10px rgba(165,50,52,0.36) inset;
     -webkit-box-shadow: -1px -18px 0px -10px rgba(165,50,52,0.36) inset;
     -moz-box-shadow: -1px -14px 0px -10px rgba(165,50,52,0.36) inset;
@@ -272,8 +272,76 @@
     position: absolute;
     top: 16%; left: 8%;
     background-color: transparent;
+    z-index: 2;
 }
 
+/* Circulos que decoran la etapa 3*/
+.circulo__num1__ganador{
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 15%; left: 5%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.047);
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+.circulo__num2__ganador{
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    top: 10%; left: -2%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.038);
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+.circulo__num3__ganador{
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 4%; left: -8%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.038);
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+.circulo__num1__perdedor{
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 15%; left: 53%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.047);
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+.circulo__num2__perdedor{
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    top: 10%; left: 47%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.047);
+    z-index: 0;
+    transition: all 0.5s ease;
+
+}
+
+.circulo__num3__perdedor{
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 4%; left: 40%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.047);
+    z-index: 0;
+    transition: all 0.5s ease;
+}
 
 /*--------------Seccion de reglas del juego--------------*/
 
