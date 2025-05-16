@@ -155,7 +155,6 @@ function seleccionDeLaMaquina(){
 
 }
 
-
 //Variables necesarias en global
 const jugar__de__nuevoBoton = document.createElement("button") as HTMLButtonElement;
 const resultado__texto = document.createElement("h1") as HTMLParagraphElement;
