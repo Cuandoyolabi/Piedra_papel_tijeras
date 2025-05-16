@@ -87,7 +87,6 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-    border: 1px solid red;
 }
 
 .contenedor__juego__interseccion{
@@ -98,7 +97,6 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    border: 10px solid rgb(112, 252, 112); 
 }
 
 .contendor__juego__interseccion.espacio__extra{
@@ -134,13 +132,20 @@
     align-items: center;
     border-radius: 50%;
     background-color: white;
+    box-shadow: -1px 38px 0px -10px rgba(203,203,203,0.36) inset;
+-webkit-box-shadow: -1px 18px 0px -10px rgba(203,203,203,0.36) inset;
+-moz-box-shadow: -1px 38px 0px -10px rgba(203,203,203,0.36) inset;
+
 }
 
 .papel{
     background: radial-gradient(circle at center, var(--Paper-Gradient));
     top: 50px;
-    left: 30px;
-    transition: all 0.5s ease;
+    left: 20px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: -1px -28px 0px -10px rgba(31,0,255,0.36) inset;
+    -webkit-box-shadow: -1px -18px 0px -10px rgba(31,0,255,0.36) inset;
+    -moz-box-shadow: -1px -28px 0px -10px rgba(31,0,255,0.36) inset;
 }
 
 .papel.active{
@@ -154,8 +159,11 @@
 
 .tijera{
     background: radial-gradient(circle at center, var(--Scissors-Gradient));
-    top: 50px; right: 30px;
-    transition: all 0.5s ease;
+    top: 50px; right: 20px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: -1px -14px 0px -10px rgba(144,95,40,0.36) inset;
+    -webkit-box-shadow: -1px -18px 0px -10px rgba(144,95,40,0.36) inset;
+    -moz-box-shadow: -1px -14px 0px -10px rgba(144,95,40,0.36) inset;
 }
 
 .tijera.seleccionado{
@@ -168,8 +176,11 @@
 
 .roca{
     background: radial-gradient(circle at center, var(--Rock-Gradient));
-    top: 200px; left: 130px;
-    transition: all 0.5s ease;
+    top: 230px; left: 130px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: -1px -14px 0px -10px rgba(165,50,52,0.36) inset;
+    -webkit-box-shadow: -1px -18px 0px -10px rgba(165,50,52,0.36) inset;
+    -moz-box-shadow: -1px -14px 0px -10px rgba(165,50,52,0.36) inset;
 }
 
 .roca.seleccionado{
@@ -270,7 +281,6 @@
     height: 150px;
     position: absolute;
     top: 16%; left: 8%;
-    border: 1px solid red;
     background-color: transparent;
 }
 
@@ -361,13 +371,11 @@
     .contenedor__juego{
         top: 250px;
         height: 55%;
-        border: 1px solid red;
     }
 
     .contenedor__juego__interseccion{
         height: 100%;
-        position: relative;
-        border: 10px solid rgb(112, 252, 112);        
+        position: relative;       
     }
 
     .contenedor__juego__interseccion.modo__responsive{
@@ -402,7 +410,7 @@
 
     .roca{
         top: 220px;
-        left: 89px;
+        left: 100px;
     }
 
     .ficha__icono{
