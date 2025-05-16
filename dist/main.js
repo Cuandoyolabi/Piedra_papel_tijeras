@@ -95,11 +95,8 @@ function seleccionDeLaMaquina() {
     let numeroRandom = Math.floor(Math.random() * 3);
     let decisionDeLaMaquina = arrayDeFichas[numeroRandom];
     if (decisionDeLaMaquina === "papel") {
-        console.log("Funcionando paso 1");
         fichaPapelMaquina.classList.add("seleccionada");
-        console.log("Funcionando paso 2");
         ficha__interior__papel__maquina.classList.add("seleccionado");
-        console.log("Funcionando paso 3");
     }
     else if (decisionDeLaMaquina === "piedra") {
         fichaRocaMaquina.classList.add("seleccionada");

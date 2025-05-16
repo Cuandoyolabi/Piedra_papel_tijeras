@@ -42,7 +42,7 @@
     align-items: center;
     margin: auto;
     border: 3px solid rgb(160, 160, 160);
-    border-radius: 9px;
+    border-radius: 12px;
 }
 
 .contenedor__conjunto__logo{
@@ -321,10 +321,12 @@
     color: var(--Dark-Text);
 }
 
+/* -------------------Media quieries para computadora-------------------*/
+
 @media (min-width: 1024px){
 
     .contenedor__conjunto{
-        width: 50%;
+        width: 60%;
         height: 150px;
     }
 
@@ -356,10 +358,12 @@
     .contenedor__juego__interseccion{
         height: 100%;
         border: 10px solid rgb(112, 252, 112);
+        justify-content: space-evenly;
+        
     }
 
     .contenedor__juego__interseccion.modo__responsive{
-        width: 50%;
+        width: 60%;
         height: 100%;
     }
 
@@ -428,19 +432,27 @@
     .papel__maquina.seleccionada{
         width: 280px;
         height: 280px;
-        top: auto; right: 0;
+        position: absolute;
+        top: auto; 
+        right: -10%;
+        margin: 0;
     }
 
     .tijera__maquina.seleccionada{
         width: 280px;
         height: 280px;
-        top: auto; right: 0;
+        top: auto; 
+        right: -50%;
+        margin: none;
+        
     }
 
     .roca__maquina.seleccionada{
         width: 280px;
         height: 280px;
-        top: auto; left: auto;
+        top: auto; 
+        right: -50%;
+        margin: none;
     }
 
     .ficha__interior__papel__maquina.seleccionado{
