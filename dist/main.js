@@ -150,6 +150,7 @@ function juego(ficha__del__jugador, ficha__maquina) {
 }
 //Funcion que reinicia el juego para probar de nuevo
 function reinicioDeJuego() {
+    console.log("MMM");
     const triangulo = document.getElementById("triangulo");
     const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
     //Retorno de la interfaz

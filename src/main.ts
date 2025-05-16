@@ -210,6 +210,7 @@ function juego(ficha__del__jugador: string, ficha__maquina: string){
 //Funcion que reinicia el juego para probar de nuevo
 function reinicioDeJuego(){
 
+    console.log("MMM")
     const triangulo = document.getElementById("triangulo") as HTMLImageElement;
     const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id") as HTMLDivElement;
 

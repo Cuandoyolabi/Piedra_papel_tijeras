@@ -480,7 +480,8 @@
 
     /*-----------Boton de reinicio de juego------------------*/
     .resultado__de__juego{
-        top: 40%;
+        
+        bottom: 43%;
     }
 
     .jugar__de__nuevo{
