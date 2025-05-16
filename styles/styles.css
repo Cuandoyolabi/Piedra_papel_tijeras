@@ -401,6 +401,10 @@
         height: 80px;
     }
 
+    /*Fichas a su lugar despues del reinicio */
+
+
+
     /* -----------Juego (Segunda etapa) Fichas del jugador -------------------*/
 
      .ficha__de__juego__interior.seleccionado{
@@ -487,7 +491,6 @@
     .jugar__de__nuevo{
         top: 60%;
     }
-
 
     /*----------- Seccion de reglas-------------------------- */
 

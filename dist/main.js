@@ -159,6 +159,7 @@ function reinicioDeJuego() {
     fichaTijera.classList.remove('active');
     triangulo.classList.remove("hidden");
     contenedor__juego__interseccion__id.classList.remove('espacio__extra');
+    contenedor__juego__interseccion__id.classList.remove('modo__responsive');
     //Variables globales
     eleccion__DelJugador__texto.remove();
     eleccion__DeLaMaquina__texto.remove();
@@ -172,6 +173,9 @@ function reinicioDeJuego() {
     fichaPapel.classList.remove("seleccionado");
     fichaRoca.classList.remove("seleccionado");
     fichaTijera.classList.remove("seleccionado");
+    ficha__interior__papel.classList.remove("seleccionado");
+    ficha__interior__tijera.classList.remove("seleccionado");
+    ficha__interior__roca.classList.remove("seleccionado");
 }
 //Funcion que sube o baja tu puntaje dependiendo de tus jugadas
 function puntaje(variable) {
