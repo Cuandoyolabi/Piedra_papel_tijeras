@@ -92,7 +92,6 @@ fichaRoca.addEventListener('click', () => {
 //Variables y elementos que se introduciran mas tarde pero que es neesaria su creacion en global
 const eleccion__DelJugador__texto: HTMLParagraphElement = document.createElement("p");
 const eleccion__DeLaMaquina__texto: HTMLParagraphElement= document.createElement("p"); 
-const espacioVacio: HTMLDivElement = document.createElement("div");
 const contenedorTransparente: HTMLDivElement = document.createElement("div");
 
 //Funcion que cambia la interfaz del programa y deja la ficha que el jugador selecciono
@@ -113,11 +112,6 @@ function seleccionDeFicha(){
     eleccion__DeLaMaquina__texto.textContent ="THE HOUSE PICKED";
     eleccion__DeLaMaquina__texto.classList.add("maquina__texto");
     contenedor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
-
-    //Contenedor visual
-    espacioVacio.classList.add("espacio__vacio");
-    contenedor__juego__interseccion__id.appendChild(espacioVacio);
-    contenedor__juego__interseccion__id.classList.add("espacio__extra");
 
     //Contenedor transparente 
     contenedorTransparente.classList.add("contenedor__transparente");
@@ -232,7 +226,6 @@ function reinicioDeJuego(){
     eleccion__DeLaMaquina__texto.remove();
     jugar__de__nuevoBoton.remove();
     resultado__texto.remove();
-    espacioVacio.remove();
     fichaPapelMaquina.classList.remove("seleccionada");
     fichaTijeraMaquina.classList.remove("seleccionada");
     fichaRocaMaquina.classList.remove("seleccionada");
