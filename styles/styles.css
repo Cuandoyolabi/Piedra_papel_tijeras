@@ -357,9 +357,7 @@
 
     .contenedor__juego__interseccion{
         height: 100%;
-        border: 10px solid rgb(112, 252, 112);
-        justify-content: space-evenly;
-        
+        border: 10px solid rgb(112, 252, 112);        
     }
 
     .contenedor__juego__interseccion.modo__responsive{
@@ -427,6 +425,12 @@
         top: auto; left: 0;
     }
 
+    /* Texto del jugador segunda etapa*/
+    .jugador__texto{
+        font-size: 18px;
+        top: 0; left: 11%;
+    }
+
     /* ------Juego (Segunda parte) fichas de la maquina ------- */
 
     .papel__maquina.seleccionada{
@@ -434,8 +438,7 @@
         height: 280px;
         position: absolute;
         top: auto; 
-        right: -10%;
-        margin: 0;
+        left:  100%;
     }
 
     .tijera__maquina.seleccionada{
