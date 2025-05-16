@@ -87,6 +87,7 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
+    border: 1px solid red;
 }
 
 .contenedor__juego__interseccion{
@@ -97,7 +98,7 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    border: 1px solid red;
+    border: 10px solid rgb(112, 252, 112); 
 }
 
 .contendor__juego__interseccion.espacio__extra{
@@ -228,7 +229,6 @@
     display: flex;
     top: 20%; left: 58%;
     z-index: 5;
-
 }
 
 .roca__maquina{
