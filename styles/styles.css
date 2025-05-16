@@ -266,15 +266,13 @@
 
 /* Contendor transparente */
 .contenedor__transparente{
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     position: absolute;
-     top: 20%; left: 10%;
+    top: 16%; left: 8%;
     border: 1px solid red;
     background-color: transparent;
 }
-
-
 
 
 /*--------------Seccion de reglas del juego--------------*/
@@ -492,6 +490,15 @@
         width: 215px;
         height: 215px;
     }
+
+    /* Tercera etapa del juego */
+    .contenedor__transparente{
+        width: 290px;
+        height: 290px;
+        left: 0;
+        top: 10%;
+    }
+
 
     /*-----------Boton de reinicio de juego------------------*/
     .resultado__de__juego{

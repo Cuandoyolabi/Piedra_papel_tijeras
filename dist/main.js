@@ -174,6 +174,7 @@ function reinicioDeJuego() {
     fichaPapelMaquina.classList.remove("seleccionada");
     fichaTijeraMaquina.classList.remove("seleccionada");
     fichaRocaMaquina.classList.remove("seleccionada");
+    contenedorTransparente.remove();
     //Fichas a su lugar
     fichaPapel.classList.remove("seleccionado");
     fichaRoca.classList.remove("seleccionado");
