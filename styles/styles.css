@@ -264,6 +264,17 @@
     cursor: pointer;
 }
 
+/* Contendor transparente */
+.contenedor__transparente{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+     top: 20%; left: 10%;
+    border: 1px solid red;
+    background-color: transparent;
+}
+
+
 
 
 /*--------------Seccion de reglas del juego--------------*/

@@ -47,6 +47,7 @@ fichaPapel.addEventListener('click', () => {
     //Funcion que se activara para el modo responsive (computadora)
     contenedor__juego__interseccion__id.classList.add("modo__responsive"); 
 
+    //Aqui es donde tal vez se implementaria la accion
     seleccionDeFicha();
     seleccionDeLaMaquina();
 
@@ -92,6 +93,7 @@ fichaRoca.addEventListener('click', () => {
 const eleccion__DelJugador__texto: HTMLParagraphElement = document.createElement("p");
 const eleccion__DeLaMaquina__texto: HTMLParagraphElement= document.createElement("p"); 
 const espacioVacio: HTMLDivElement = document.createElement("div");
+const contenedorTransparente: HTMLDivElement = document.createElement("div");
 
 //Funcion que cambia la interfaz del programa y deja la ficha que el jugador selecciono
 function seleccionDeFicha(){
@@ -115,8 +117,11 @@ function seleccionDeFicha(){
     //Contenedor visual
     espacioVacio.classList.add("espacio__vacio");
     contenedor__juego__interseccion__id.appendChild(espacioVacio);
-
     contenedor__juego__interseccion__id.classList.add("espacio__extra");
+
+    //Contenedor transparente 
+    contenedorTransparente.classList.add("contenedor__transparente");
+    contenedor__juego__interseccion__id.appendChild(contenedorTransparente);
 
 }
 
