@@ -263,6 +263,7 @@
     border: none;
     background-color: white;
     cursor: pointer;
+    z-index: 2;
 }
 
 /* Contendor transparente */
@@ -563,6 +564,50 @@
         height: 290px;
         left: 0;
         top: 10%;
+    }
+
+
+    /* ------------Circulos de diseño--------------------------*/
+    .circulo__num1__ganador{
+        width: 370px;
+        height: 370px;
+        top: auto;
+        left:  -5%;
+    }
+
+    .circulo__num2__ganador{
+        width: 480px;
+        height: 480px;
+        top: auto;
+        left: -11%;
+    }
+
+    .circulo__num3__ganador{
+        width: 580px;
+        height: 580px;
+        top: auto;
+        left: -16%;
+    }
+
+    .circulo__num1__perdedor{
+        width: 370px;
+        height: 370px;
+        top: auto;
+        left: 65%;
+    }
+
+    .circulo__num2__perdedor{
+        width: 480px;
+        height: 480px;
+        top: auto;
+        left: 59%;
+    }
+
+    .circulo__num3__perdedor{
+        width: 580px;
+        height: 580px;
+        top: auto;
+        left: 54%;
     }
 
 
