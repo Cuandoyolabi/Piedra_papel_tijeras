@@ -87,7 +87,7 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-    border: 2px solid red;
+
 }
 
 .contenedor__juego__interseccion{
@@ -98,7 +98,6 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    border: 2px solid green;
 }
 
 .contendor__juego__interseccion.espacio__extra{
@@ -352,7 +351,7 @@
     width: 150px;
     height: 40px;
     position: absolute;
-    bottom: 100px; left: 0; right: 0;
+    bottom: 50px; left: 0; right: 0;
     margin: auto;
     border-radius: 9px;
     background-color: transparent;
@@ -430,14 +429,14 @@
     /* ---------------Juego-------------------- */
 
     .contenedor__juego{
-        top: 350px;
-        height: 40%;
+        top: 250px;
+        height: 50%;
     }
 
     .contenedor__juego__interseccion{
         height: 100%;
         position: relative;     
-        border: 3px solid yellow;  
+
     }
 
     .contenedor__juego__interseccion.modo__responsive{
@@ -447,8 +446,7 @@
 
     .contenedor__juego__triangulo{
         width: 280px;
-        height: 280px;
-        border: 1px solid rgb(174, 174, 255);
+        height: 230px;
     }
 
     .ficha__de__juego{
@@ -628,7 +626,7 @@
 
     .contentedor__reglas__button{
         bottom: 10%;
-        left: 0%;
+        right: -67%;
     }
 
     .pagina__reglas{
@@ -692,8 +690,7 @@
 
     .contenedor__juego__interseccion{
         height: 100%;
-        position: relative;    
-        border: 10px solid rgb(15, 238, 15);   
+        position: relative;     
     }
 
     .contenedor__juego__interseccion.modo__responsive{
@@ -919,13 +916,11 @@
     .contenedor__juego{
         top: 300px;
         height: 60%;
-        border: 10px solid rgb(34, 97, 255);
     }
 
     .contenedor__juego__interseccion{
         height: 50%;
-        position: relative;    
-        border: 5px solid rgb(193, 237, 0);   
+        position: relative;       
     }
 
     .contenedor__juego__interseccion.modo__responsive{
@@ -933,5 +928,24 @@
         height: 100%;
     }
 
+}
+
+@media (min-width: 900px) and (min-height: 1366px){
+
+    .contenedor__juego{
+        top: 300px;
+        height: 60%;
+    }
+
+    .contenedor__juego__interseccion{
+        height: 40%;
+        position: relative;    
+
+    }
+
+    .contenedor__juego__interseccion.modo__responsive{
+        width: 90%;
+        height: 100%;
+    }
 
 }
