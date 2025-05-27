@@ -1,15 +1,15 @@
 "use strict";
 const botonReglas = document.getElementById('reglas__boton');
 const paginaReglas = document.getElementById('pagina__reglas__id');
-const modal__oscuro = document.getElementById('modal__oscuro__id');
+const modalObscuro = document.getElementById('modal__oscuro__id');
 const cerrarReglas = document.getElementById('cerrar__boton');
 const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
 botonReglas.addEventListener('click', () => {
-    modal__oscuro.classList.add('active');
+    modalObscuro.classList.add('active');
     paginaReglas.classList.add('active');
 });
 cerrarReglas.addEventListener('click', () => {
-    modal__oscuro.classList.remove('active');
+    modalObscuro.classList.remove('active');
     paginaReglas.classList.remove('active');
 });
 // 1-Poder seleccionar una ficha y que las demas fichas desaparezcan
@@ -17,16 +17,16 @@ const fichaPapel = document.getElementById("papel");
 const fichaTijera = document.getElementById("tijera");
 const fichaRoca = document.getElementById("roca");
 //Se llaman al interior de las fichas para agregarles un diferente tamaño en modo responsive
-const ficha__interior__papel = document.getElementById("ficha__interior__papel");
-const ficha__interior__tijera = document.getElementById("ficha__interior__tijera");
-const ficha__interior__roca = document.getElementById("ficha__interior__roca");
+const fichaInteriorPapel = document.getElementById("ficha__interior__papel");
+const fichaInteriorTijera = document.getElementById("ficha__interior__tijera");
+const fichaInteriorRoca = document.getElementById("ficha__interior__roca");
 //Ficha de juego ineterior
-const ficha__interior = document.getElementById("ficha__de__juego__interior__id");
+const fichaInterior = document.getElementById("ficha__de__juego__interior__id");
 //Crear una variable que se llene cuando elija una figura
 let ficha__seleccionada = "";
 fichaPapel.addEventListener('click', () => {
     fichaPapel.classList.add("seleccionado");
-    ficha__interior__papel.classList.add("seleccionado");
+    fichaInteriorPapel.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaRoca.classList.add("active");
     ficha__seleccionada = "papel";
@@ -38,7 +38,7 @@ fichaPapel.addEventListener('click', () => {
 });
 fichaTijera.addEventListener('click', () => {
     fichaTijera.classList.add("seleccionado");
-    ficha__interior__tijera.classList.add("seleccionado");
+    fichaInteriorTijera.classList.add("seleccionado");
     fichaPapel.classList.add("active");
     fichaRoca.classList.add("active");
     ficha__seleccionada = "tijera";
@@ -49,7 +49,7 @@ fichaTijera.addEventListener('click', () => {
 });
 fichaRoca.addEventListener('click', () => {
     fichaRoca.classList.add("seleccionado");
-    ficha__interior__roca.classList.add("seleccionado");
+    fichaInteriorRoca.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
     ficha__seleccionada = "piedra";
@@ -191,9 +191,9 @@ function reinicioDeJuego() {
     fichaPapel.classList.remove("seleccionado");
     fichaRoca.classList.remove("seleccionado");
     fichaTijera.classList.remove("seleccionado");
-    ficha__interior__papel.classList.remove("seleccionado");
-    ficha__interior__tijera.classList.remove("seleccionado");
-    ficha__interior__roca.classList.remove("seleccionado");
+    fichaInteriorPapel.classList.remove("seleccionado");
+    fichaInteriorTijera.classList.remove("seleccionado");
+    fichaInteriorRoca.classList.remove("seleccionado");
     //Circulos que agregan diseño
     circulo__num1.remove();
     circulo__num2.remove();
