@@ -401,7 +401,263 @@
     color: var(--Dark-Text);
 }
 
-/* -------------------Media quieries para computadora-------------------*/
+/* -------------------Media quieries para tablet-------------------*/
+
+@media (min-width: 700px){
+
+    .contenedor__conjunto{
+        width: 60%;
+        height: 150px;
+    }
+
+    .contenedor__conjunto__logo{
+        width: 160px;
+        margin-left: 30px;
+    }
+
+    .contenedor__puntaje{
+        margin-right: 20px;
+    }
+
+    .contenedor__puntaje__texto{
+        font-size: 20px;
+    }
+
+    .contenedor__puntaje__numero{
+        font-size: 50px;
+    }
+
+    /* ---------------Juego-------------------- */
+
+    .contenedor__juego{
+        top: 350px;
+        height: 40%;
+    }
+
+    .contenedor__juego__interseccion{
+        height: 100%;
+        position: relative;     
+        border: 3px solid yellow;  
+    }
+
+    .contenedor__juego__interseccion.modo__responsive{
+        width: 90%;
+        height: 100%;
+    }
+
+    .contenedor__juego__triangulo{
+        width: 280px;
+        height: 280px;
+        border: 1px solid rgb(174, 174, 255);
+    }
+
+    .ficha__de__juego{
+        width: 180px;
+        height: 180px;
+    }
+
+    .ficha__de__juego__interior{
+        width: 140px;
+        height: 140px;
+    }
+
+    .papel{
+        top: 0px;
+        left: -50px;
+    }
+
+    .tijera{
+        top: 5px;
+        right: -50px;
+    }
+
+    .roca{
+        top: 220px;
+        left: 100px;
+    }
+
+    .ficha__icono{
+        width: 80px;
+        height: 80px;
+    }
+
+    /*Fichas a su lugar despues del reinicio */
+
+
+
+    /* -----------Juego (Segunda etapa) Fichas del jugador -------------------*/
+
+     .ficha__de__juego__interior.seleccionado{
+        width: 145px;
+        height: 145px;
+    }
+
+    .papel.seleccionado{
+        width: 200px;
+        height: 200px;
+        top: auto; left: 0;
+    }
+
+    .tijera.seleccionado{
+        width: 200px;
+        height: 200px;
+        top: auto; left: 0;
+    }
+
+    .roca.seleccionado{
+        width: 200px;
+        height: 200px;
+        top: auto; left: 0;
+    }
+
+    /* Texto del jugador segunda etapa*/
+    .jugador__texto{
+        font-size: 18px;
+        top: 0; left: 11%;
+    }
+
+    .maquina__texto{
+        font-size: 18px;
+        top: 0; right: 8%;
+    }
+
+    /* ------Juego (Segunda parte) fichas de la maquina ------- */
+
+    .papel__maquina.seleccionada{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: auto; 
+        left: 69%;
+    }
+
+    .tijera__maquina.seleccionada{
+        width: 200px;
+        height: 200px;
+        top: auto; 
+        left: 69%;
+        margin: none;
+    }
+
+    .roca__maquina.seleccionada{
+        width: 200px;
+        height: 200px;
+        top: auto; 
+        left: 56%;
+        margin: none;
+    }
+
+    .ficha__interior__papel__maquina.seleccionado{
+        width: 215px;
+        height: 215px;
+    }
+
+    .ficha__interior__tijera__maquina.seleccionado{
+        width: 215px;
+        height: 215px;
+    }
+
+    .ficha__interior__roca__maquina.seleccionado{
+        width: 215px;
+        height: 215px;
+    }
+
+    /* Tercera etapa del juego */
+    .contenedor__transparente{
+        width: 290px;
+        height: 290px;
+        left: 0;
+        top: 10%;
+    }
+
+
+    /* ------------Circulos de diseño--------------------------*/
+    .circulo__num1__ganador{
+        width: 370px;
+        height: 370px;
+        top: auto;
+        left:  -12%;
+    }
+
+    .circulo__num2__ganador{
+        width: 480px;
+        height: 480px;
+        top: auto;
+        left: -18%;
+    }
+
+    .circulo__num3__ganador{
+        width: 580px;
+        height: 580px;
+        top: auto;
+        left: -23%;
+    }
+
+    .circulo__num1__perdedor{
+        width: 370px;
+        height: 370px;
+        top: auto;
+        left: 56%;
+    }
+
+    .circulo__num2__perdedor{
+        width: 480px;
+        height: 480px;
+        top: auto;
+        left: 50%;
+    }
+
+    .circulo__num3__perdedor{
+        width: 580px;
+        height: 580px;
+        top: auto;
+        left: 42%;
+    }
+
+
+    /*-----------Boton de reinicio de juego------------------*/
+    .resultado__de__juego{
+        bottom: 43%;
+    }
+
+    .jugar__de__nuevo{
+        top: 60%;
+    }
+
+    /*----------- Seccion de reglas-------------------------- */
+
+    .contentedor__reglas__button{
+        bottom: 10%;
+        left: 0%;
+    }
+
+    .pagina__reglas{
+        width: 500px; height: 500px;
+        top: 100px; left: 0; right: 0;
+        margin: auto;
+        border-radius: 9px;
+    }
+
+    .pagina__reglas__texto{
+        position: absolute;
+        top: 0; left: 0;
+        padding: 60px 60px;
+    }
+
+    .cerrar__boton__class{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 70px 60px;
+    }
+
+    .pagina__reglas__img{
+        margin-top: 80px;
+    }
+
+}
+
+/*------------------Media queries para computadora-------------*/
 
 @media (min-width: 1024px){
 
@@ -431,12 +687,13 @@
 
     .contenedor__juego{
         top: 250px;
-        height: 0;
+        height: 55%;
     }
 
     .contenedor__juego__interseccion{
         height: 100%;
-        position: relative;       
+        position: relative;    
+        border: 10px solid rgb(15, 238, 15);   
     }
 
     .contenedor__juego__interseccion.modo__responsive{
@@ -471,7 +728,7 @@
 
     .roca{
         top: 220px;
-        left: 100px;
+        left: 90px;
     }
 
     .ficha__icono{
@@ -656,256 +913,25 @@
 
 }
 
-@media (min-width: 700px){
-
-    .contenedor__conjunto{
-        width: 60%;
-        height: 150px;
-    }
-
-    .contenedor__conjunto__logo{
-        width: 160px;
-        margin-left: 30px;
-    }
-
-    .contenedor__puntaje{
-        margin-right: 20px;
-    }
-
-    .contenedor__puntaje__texto{
-        font-size: 20px;
-    }
-
-    .contenedor__puntaje__numero{
-        font-size: 50px;
-    }
-
-    /* ---------------Juego-------------------- */
+/*----Media queries para tablets y computadoras con un ancho grande----*/
+@media (min-width: 1024px) and (min-height: 1366px){
 
     .contenedor__juego{
-        top: 320px;
-        height: 40%;
+        top: 300px;
+        height: 60%;
+        border: 10px solid rgb(34, 97, 255);
     }
 
     .contenedor__juego__interseccion{
-        height: 100%;
-        position: relative;     
-        border: 3px solid yellow;  
+        height: 50%;
+        position: relative;    
+        border: 5px solid rgb(193, 237, 0);   
     }
 
     .contenedor__juego__interseccion.modo__responsive{
-        width: 60%;
+        width: 90%;
         height: 100%;
     }
 
-    .contenedor__juego__triangulo{
-        width: 250px;
-        height: 200px;
-    }
-
-    .ficha__de__juego{
-        width: 180px;
-        height: 180px;
-    }
-
-    .ficha__de__juego__interior{
-        width: 140px;
-        height: 140px;
-    }
-
-    .papel{
-        top: 0px;
-        left: -50px;
-    }
-
-    .tijera{
-        top: 5px;
-        right: -50px;
-    }
-
-    .roca{
-        top: 220px;
-        left: 100px;
-    }
-
-    .ficha__icono{
-        width: 80px;
-        height: 80px;
-    }
-
-    /*Fichas a su lugar despues del reinicio */
-
-
-
-    /* -----------Juego (Segunda etapa) Fichas del jugador -------------------*/
-
-     .ficha__de__juego__interior.seleccionado{
-        width: 215px;
-        height: 215px;
-    }
-
-    .papel.seleccionado{
-        width: 280px;
-        height: 280px;
-        top: auto; left: 0;
-    }
-
-    .tijera.seleccionado{
-        width: 280px;
-        height: 280px;
-        top: auto; left: 0;
-    }
-
-    .roca.seleccionado{
-        width: 280px;
-        height: 280px;
-        top: auto; left: 0;
-    }
-
-    /* Texto del jugador segunda etapa*/
-    .jugador__texto{
-        font-size: 18px;
-        top: 0; left: 11%;
-    }
-
-    .maquina__texto{
-        font-size: 18px;
-        top: 0; right: 8%;
-    }
-
-    /* ------Juego (Segunda parte) fichas de la maquina ------- */
-
-    .papel__maquina.seleccionada{
-        width: 280px;
-        height: 280px;
-        position: absolute;
-        top: auto; 
-        left: 69%;
-    }
-
-    .tijera__maquina.seleccionada{
-        width: 280px;
-        height: 280px;
-        top: auto; 
-        left: 69%;
-        margin: none;
-    }
-
-    .roca__maquina.seleccionada{
-        width: 280px;
-        height: 280px;
-        top: auto; 
-        left: 56%;
-        margin: none;
-    }
-
-    .ficha__interior__papel__maquina.seleccionado{
-        width: 215px;
-        height: 215px;
-    }
-
-    .ficha__interior__tijera__maquina.seleccionado{
-        width: 215px;
-        height: 215px;
-    }
-
-    .ficha__interior__roca__maquina.seleccionado{
-        width: 215px;
-        height: 215px;
-    }
-
-    /* Tercera etapa del juego */
-    .contenedor__transparente{
-        width: 290px;
-        height: 290px;
-        left: 0;
-        top: 10%;
-    }
-
-
-    /* ------------Circulos de diseño--------------------------*/
-    .circulo__num1__ganador{
-        width: 370px;
-        height: 370px;
-        top: auto;
-        left:  -5%;
-    }
-
-    .circulo__num2__ganador{
-        width: 480px;
-        height: 480px;
-        top: auto;
-        left: -11%;
-    }
-
-    .circulo__num3__ganador{
-        width: 580px;
-        height: 580px;
-        top: auto;
-        left: -16%;
-    }
-
-    .circulo__num1__perdedor{
-        width: 370px;
-        height: 370px;
-        top: auto;
-        left: 65%;
-    }
-
-    .circulo__num2__perdedor{
-        width: 480px;
-        height: 480px;
-        top: auto;
-        left: 59%;
-    }
-
-    .circulo__num3__perdedor{
-        width: 580px;
-        height: 580px;
-        top: auto;
-        left: 54%;
-    }
-
-
-    /*-----------Boton de reinicio de juego------------------*/
-    .resultado__de__juego{
-        
-        bottom: 43%;
-    }
-
-    .jugar__de__nuevo{
-        top: 60%;
-    }
-
-    /*----------- Seccion de reglas-------------------------- */
-
-    .contentedor__reglas__button{
-        bottom: 10%;
-        left: 80%;
-    }
-
-    .pagina__reglas{
-        width: 500px; height: 500px;
-        top: 100px; left: 0; right: 0;
-        margin: auto;
-        border-radius: 9px;
-    }
-
-    .pagina__reglas__texto{
-        position: absolute;
-        top: 0; left: 0;
-        padding: 60px 60px;
-    }
-
-    .cerrar__boton__class{
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 70px 60px;
-    }
-
-    .pagina__reglas__img{
-        margin-top: 80px;
-    }
 
 }
