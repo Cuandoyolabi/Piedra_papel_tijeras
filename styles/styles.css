@@ -659,6 +659,10 @@
 
 @media (min-width: 1024px){
 
+    body{
+        overflow-x: hidden;
+    }
+
     .contenedor__conjunto{
         width: 60%;
         height: 150px;
@@ -916,6 +920,7 @@
     .contenedor__juego{
         top: 300px;
         height: 60%;
+
     }
 
     .contenedor__juego__interseccion{
