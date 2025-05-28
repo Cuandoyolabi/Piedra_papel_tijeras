@@ -2,7 +2,7 @@ const botonReglas = document.getElementById('reglas__boton') as HTMLButtonElemen
 const paginaReglas = document.getElementById('pagina__reglas__id') as HTMLDivElement;
 const modalObscuro = document.getElementById('modal__oscuro__id') as HTMLDivElement;
 const cerrarReglas = document.getElementById('cerrar__boton') as HTMLButtonElement;
- const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id") as HTMLDivElement;
+const contenedorDeJuegoInterseccion__id = document.getElementById("contenedor__juego__interseccion__id") as HTMLDivElement;
 
 botonReglas.addEventListener('click', () => {
 
@@ -32,7 +32,7 @@ const fichaInteriorRoca = document.getElementById("ficha__interior__roca") as HT
 const fichaInterior = document.getElementById("ficha__de__juego__interior__id") as HTMLDivElement;
 
 //Crear una variable que se llene cuando elija una figura
-let ficha__seleccionada: string = "";
+let fichaSeleccionada: string = "";
 
 fichaPapel.addEventListener('click', () => {
 
@@ -42,10 +42,10 @@ fichaPapel.addEventListener('click', () => {
     fichaTijera.classList.add("active");
     fichaRoca.classList.add("active");
     
-    ficha__seleccionada = "papel";
+    fichaSeleccionada = "papel";
     
     //Funcion que se activara para el modo responsive (computadora)
-    contenedor__juego__interseccion__id.classList.add("modo__responsive"); 
+    contenedorDeJuegoInterseccion__id.classList.add("modo__responsive"); 
 
     //Aqui es donde tal vez se implementaria la accion
     seleccionDeFicha();
@@ -61,10 +61,10 @@ fichaTijera.addEventListener('click', () => {
     fichaPapel.classList.add("active");
     fichaRoca.classList.add("active");
     
-    ficha__seleccionada = "tijera";
+    fichaSeleccionada = "tijera";
 
     //Funcion que se activara para el modo responsive (computadora)
-    contenedor__juego__interseccion__id.classList.add("modo__responsive"); 
+    contenedorDeJuegoInterseccion__id.classList.add("modo__responsive"); 
 
     seleccionDeFicha();
     seleccionDeLaMaquina();
@@ -79,10 +79,10 @@ fichaRoca.addEventListener('click', () => {
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
     
-    ficha__seleccionada = "piedra";
+    fichaSeleccionada = "piedra";
     
     //Funcion que se activara para el modo responsive (computadora)
-    contenedor__juego__interseccion__id.classList.add("modo__responsive"); 
+    contenedorDeJuegoInterseccion__id.classList.add("modo__responsive"); 
 
     seleccionDeFicha();
     seleccionDeLaMaquina();
@@ -90,12 +90,12 @@ fichaRoca.addEventListener('click', () => {
 });
 
 //Variables y elementos que se introduciran mas tarde pero que es neesaria su creacion en global
-const eleccion__DelJugador__texto: HTMLParagraphElement = document.createElement("p");
-const eleccion__DeLaMaquina__texto: HTMLParagraphElement= document.createElement("p"); 
+const eleccionDelJugadorTexto: HTMLParagraphElement = document.createElement("p");
+const eleccionDeLaMaquinaTexto: HTMLParagraphElement= document.createElement("p"); 
 const contenedorTransparente: HTMLDivElement = document.createElement("div");
 
 //Funcion que cambia la interfaz del programa y deja la ficha que el jugador selecciono
-function seleccionDeFicha(){
+function seleccionDeFicha(): void{
 
     const triangulo = document.getElementById("triangulo") as HTMLImageElement;
     triangulo.classList.add("hidden");
@@ -104,14 +104,14 @@ function seleccionDeFicha(){
     const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id") as HTMLDivElement;
     
     //Tu seleccion
-    eleccion__DelJugador__texto.textContent = "YOU PICKED";
-    eleccion__DelJugador__texto.classList.add("jugador__texto");
-    contenedor__juego__interseccion__id.appendChild(eleccion__DelJugador__texto);
+    eleccionDelJugadorTexto.textContent = "YOU PICKED";
+    eleccionDelJugadorTexto.classList.add("jugador__texto");
+    contenedor__juego__interseccion__id.appendChild(eleccionDelJugadorTexto);
 
     //La eleccion de la maquina
-    eleccion__DeLaMaquina__texto.textContent ="THE HOUSE PICKED";
-    eleccion__DeLaMaquina__texto.classList.add("maquina__texto");
-    contenedor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
+    eleccionDeLaMaquinaTexto.textContent ="THE HOUSE PICKED";
+    eleccionDeLaMaquinaTexto.classList.add("maquina__texto");
+    contenedor__juego__interseccion__id.appendChild(eleccionDeLaMaquinaTexto);
 
     //Contenedor transparente 
     contenedorTransparente.classList.add("contenedor__transparente");
@@ -130,7 +130,7 @@ const ficha__interior__tijera__maquina = document.getElementById("ficha__interio
 const ficha__interior__roca__maquina = document.getElementById("ficha__interior__roca__maquina") as HTMLDivElement;
 
 //Funcion que elige una ficha del array de manera aleatoria
-function seleccionDeLaMaquina(){
+function seleccionDeLaMaquina(): void {
 
     let arrayDeFichas : string[] = ["piedra", "papel", "tijera"];
 
@@ -150,40 +150,40 @@ function seleccionDeLaMaquina(){
         ficha__interior__tijera__maquina.classList.add("seleccionado");
     }
 
-    juego(ficha__seleccionada, decisionDeLaMaquina);
+    juego(fichaSeleccionada, decisionDeLaMaquina);
 
 }
 
 //Variables necesarias en global
-const jugar__de__nuevoBoton = document.createElement("button") as HTMLButtonElement;
-const resultado__texto = document.createElement("h1") as HTMLParagraphElement;
+const jugarDeNuevoBoton = document.createElement("button") as HTMLButtonElement;
+const resultadoTexto = document.createElement("h1") as HTMLParagraphElement;
 
 //Contenedores que aparecen cuando alguien gana y le dan un estilo al juego
-const circulo__num1 = document.createElement("div") as HTMLDivElement;
-const circulo__num2 = document.createElement("div") as HTMLDivElement;
-const circulo__num3 = document.createElement("div") as HTMLDivElement;
+const circuloNum1 = document.createElement("div") as HTMLDivElement;
+const circuloNum2 = document.createElement("div") as HTMLDivElement;
+const circuloNum3 = document.createElement("div") as HTMLDivElement;
 
-function juego(ficha__del__jugador: string, ficha__maquina: string){
+function juego(fichaJugador: string, fichaMaquina: string){
 
-    const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id") as HTMLDivElement;
+    const contenedorDeJuegoInterseccion__id = document.getElementById("contenedor__juego__interseccion__id") as HTMLDivElement;
 
     //Boton de reinicio
-    jugar__de__nuevoBoton.textContent = "PLAY AGAIN";
-    jugar__de__nuevoBoton.classList.add("jugar__de__nuevo");
-    jugar__de__nuevoBoton.id = 'jugar__de__nuevo__id';
-    contenedor__juego__interseccion__id.appendChild(jugar__de__nuevoBoton);
+    jugarDeNuevoBoton.textContent = "PLAY AGAIN";
+    jugarDeNuevoBoton.classList.add("jugar__de__nuevo");
+    jugarDeNuevoBoton.id = 'jugar__de__nuevo__id';
+    contenedorDeJuegoInterseccion__id.appendChild(jugarDeNuevoBoton);
 
-    jugar__de__nuevoBoton.addEventListener('click', () => {
+    jugarDeNuevoBoton.addEventListener('click', () => {
         reinicioDeJuego();
     });
 
     //Texto de aviso
-    resultado__texto.classList.add("resultado__de__juego");
+    resultadoTexto.classList.add("resultado__de__juego");
 
-    if(ficha__del__jugador === ficha__maquina){
+    if(fichaJugador === fichaMaquina){
 
-        resultado__texto.textContent = "DRAW";
-        contenedor__juego__interseccion__id.appendChild(resultado__texto);
+        resultadoTexto.textContent = "DRAW";
+        contenedorDeJuegoInterseccion__id.appendChild(resultadoTexto);
         return;
     }
 
@@ -195,41 +195,41 @@ function juego(ficha__del__jugador: string, ficha__maquina: string){
 
     }
 
-    if(ganaContra[ficha__del__jugador] === ficha__maquina){
+    if(ganaContra[fichaJugador] === fichaMaquina){
         //Ganaste
-        resultado__texto.textContent = "YOU WIN";
-        contenedor__juego__interseccion__id.appendChild(resultado__texto);
+        resultadoTexto.textContent = "YOU WIN";
+        contenedorDeJuegoInterseccion__id.appendChild(resultadoTexto);
         let win: string = "WIN";
 
         //Circulos que agregan diseño del lado ganador
-        circulo__num1.classList.add("circulo__num1__ganador");
-        contenedor__juego__interseccion__id.appendChild(circulo__num1);
-        circulo__num2.classList.add("circulo__num2__ganador");
-        contenedor__juego__interseccion__id.appendChild(circulo__num2);
-        circulo__num3.classList.add("circulo__num3__ganador");
-        contenedor__juego__interseccion__id.appendChild(circulo__num3);
+        circuloNum1.classList.add("circulo__num1__ganador");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum1);
+        circuloNum2.classList.add("circulo__num2__ganador");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum2);
+        circuloNum3.classList.add("circulo__num3__ganador");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum3);
         puntaje(win);
 
         
     } else {
         //Perdiste
-        resultado__texto.textContent = "YOU LOSE";
-        contenedor__juego__interseccion__id.appendChild(resultado__texto);
+        resultadoTexto.textContent = "YOU LOSE";
+        contenedorDeJuegoInterseccion__id.appendChild(resultadoTexto);
         let lose: string = "LOSE";
 
         //Circulso que agregan diseño del lado perdedor
-        circulo__num1.classList.add("circulo__num1__perdedor");
-        contenedor__juego__interseccion__id.appendChild(circulo__num1);
-        circulo__num2.classList.add("circulo__num2__perdedor");
-        contenedor__juego__interseccion__id.appendChild(circulo__num2);
-        circulo__num3.classList.add("circulo__num3__perdedor");
-        contenedor__juego__interseccion__id.appendChild(circulo__num3);
+        circuloNum1.classList.add("circulo__num1__perdedor");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum1);
+        circuloNum2.classList.add("circulo__num2__perdedor");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum2);
+        circuloNum3.classList.add("circulo__num3__perdedor");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum3);
         puntaje(lose);
     }
 }
 
 //Funcion que reinicia el juego para probar de nuevo
-function reinicioDeJuego(){
+function reinicioDeJuego(): void{
 
     console.log("MMM")
     const triangulo = document.getElementById("triangulo") as HTMLImageElement;
@@ -244,10 +244,10 @@ function reinicioDeJuego(){
     contenedor__juego__interseccion__id.classList.remove('modo__responsive');
 
     //Variables globales
-    eleccion__DelJugador__texto.remove();
-    eleccion__DeLaMaquina__texto.remove();
-    jugar__de__nuevoBoton.remove();
-    resultado__texto.remove();
+    eleccionDelJugadorTexto.remove();
+    eleccionDeLaMaquinaTexto.remove();
+    jugarDeNuevoBoton.remove();
+    resultadoTexto.remove();
     fichaPapelMaquina.classList.remove("seleccionada");
     fichaTijeraMaquina.classList.remove("seleccionada");
     fichaRocaMaquina.classList.remove("seleccionada");
@@ -263,18 +263,18 @@ function reinicioDeJuego(){
     fichaInteriorRoca.classList.remove("seleccionado");
 
     //Circulos que agregan diseño
-    circulo__num1.remove();
-    circulo__num2.remove();
-    circulo__num3.remove();
-    circulo__num1.classList.remove("circulo__num1__ganador", "circulo__num1__perdedor");
-    circulo__num2.classList.remove("circulo__num2__ganador", "circulo__num2__perdedor");
-    circulo__num3.classList.remove("circulo__num3__ganador", "circulo__num3__perdedor");
+    circuloNum1.remove();
+    circuloNum2.remove();
+    circuloNum3.remove();
+    circuloNum1.classList.remove("circulo__num1__ganador", "circulo__num1__perdedor");
+    circuloNum2.classList.remove("circulo__num2__ganador", "circulo__num2__perdedor");
+    circuloNum3.classList.remove("circulo__num3__ganador", "circulo__num3__perdedor");
 
 }
 
 
 //Funcion que sube o baja tu puntaje dependiendo de tus jugadas
-function puntaje(variable: string){
+function puntaje(variable: string): void {
     
     const puntaje = document.getElementById("puntaje__id") as HTMLParagraphElement;
 

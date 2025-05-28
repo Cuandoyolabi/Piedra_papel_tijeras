@@ -3,7 +3,7 @@ const botonReglas = document.getElementById('reglas__boton');
 const paginaReglas = document.getElementById('pagina__reglas__id');
 const modalObscuro = document.getElementById('modal__oscuro__id');
 const cerrarReglas = document.getElementById('cerrar__boton');
-const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
+const contenedorDeJuegoInterseccion__id = document.getElementById("contenedor__juego__interseccion__id");
 botonReglas.addEventListener('click', () => {
     modalObscuro.classList.add('active');
     paginaReglas.classList.add('active');
@@ -23,15 +23,15 @@ const fichaInteriorRoca = document.getElementById("ficha__interior__roca");
 //Ficha de juego ineterior
 const fichaInterior = document.getElementById("ficha__de__juego__interior__id");
 //Crear una variable que se llene cuando elija una figura
-let ficha__seleccionada = "";
+let fichaSeleccionada = "";
 fichaPapel.addEventListener('click', () => {
     fichaPapel.classList.add("seleccionado");
     fichaInteriorPapel.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaRoca.classList.add("active");
-    ficha__seleccionada = "papel";
+    fichaSeleccionada = "papel";
     //Funcion que se activara para el modo responsive (computadora)
-    contenedor__juego__interseccion__id.classList.add("modo__responsive");
+    contenedorDeJuegoInterseccion__id.classList.add("modo__responsive");
     //Aqui es donde tal vez se implementaria la accion
     seleccionDeFicha();
     seleccionDeLaMaquina();
@@ -41,9 +41,9 @@ fichaTijera.addEventListener('click', () => {
     fichaInteriorTijera.classList.add("seleccionado");
     fichaPapel.classList.add("active");
     fichaRoca.classList.add("active");
-    ficha__seleccionada = "tijera";
+    fichaSeleccionada = "tijera";
     //Funcion que se activara para el modo responsive (computadora)
-    contenedor__juego__interseccion__id.classList.add("modo__responsive");
+    contenedorDeJuegoInterseccion__id.classList.add("modo__responsive");
     seleccionDeFicha();
     seleccionDeLaMaquina();
 });
@@ -52,15 +52,15 @@ fichaRoca.addEventListener('click', () => {
     fichaInteriorRoca.classList.add("seleccionado");
     fichaTijera.classList.add("active");
     fichaPapel.classList.add("active");
-    ficha__seleccionada = "piedra";
+    fichaSeleccionada = "piedra";
     //Funcion que se activara para el modo responsive (computadora)
-    contenedor__juego__interseccion__id.classList.add("modo__responsive");
+    contenedorDeJuegoInterseccion__id.classList.add("modo__responsive");
     seleccionDeFicha();
     seleccionDeLaMaquina();
 });
 //Variables y elementos que se introduciran mas tarde pero que es neesaria su creacion en global
-const eleccion__DelJugador__texto = document.createElement("p");
-const eleccion__DeLaMaquina__texto = document.createElement("p");
+const eleccionDelJugadorTexto = document.createElement("p");
+const eleccionDeLaMaquinaTexto = document.createElement("p");
 const contenedorTransparente = document.createElement("div");
 //Funcion que cambia la interfaz del programa y deja la ficha que el jugador selecciono
 function seleccionDeFicha() {
@@ -69,13 +69,13 @@ function seleccionDeFicha() {
     //Obtener ese div para insertar dos textos
     const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
     //Tu seleccion
-    eleccion__DelJugador__texto.textContent = "YOU PICKED";
-    eleccion__DelJugador__texto.classList.add("jugador__texto");
-    contenedor__juego__interseccion__id.appendChild(eleccion__DelJugador__texto);
+    eleccionDelJugadorTexto.textContent = "YOU PICKED";
+    eleccionDelJugadorTexto.classList.add("jugador__texto");
+    contenedor__juego__interseccion__id.appendChild(eleccionDelJugadorTexto);
     //La eleccion de la maquina
-    eleccion__DeLaMaquina__texto.textContent = "THE HOUSE PICKED";
-    eleccion__DeLaMaquina__texto.classList.add("maquina__texto");
-    contenedor__juego__interseccion__id.appendChild(eleccion__DeLaMaquina__texto);
+    eleccionDeLaMaquinaTexto.textContent = "THE HOUSE PICKED";
+    eleccionDeLaMaquinaTexto.classList.add("maquina__texto");
+    contenedor__juego__interseccion__id.appendChild(eleccionDeLaMaquinaTexto);
     //Contenedor transparente 
     contenedorTransparente.classList.add("contenedor__transparente");
     contenedor__juego__interseccion__id.appendChild(contenedorTransparente);
@@ -106,30 +106,30 @@ function seleccionDeLaMaquina() {
         fichaTijeraMaquina.classList.add("seleccionada");
         ficha__interior__tijera__maquina.classList.add("seleccionado");
     }
-    juego(ficha__seleccionada, decisionDeLaMaquina);
+    juego(fichaSeleccionada, decisionDeLaMaquina);
 }
 //Variables necesarias en global
-const jugar__de__nuevoBoton = document.createElement("button");
-const resultado__texto = document.createElement("h1");
+const jugarDeNuevoBoton = document.createElement("button");
+const resultadoTexto = document.createElement("h1");
 //Contenedores que aparecen cuando alguien gana y le dan un estilo al juego
-const circulo__num1 = document.createElement("div");
-const circulo__num2 = document.createElement("div");
-const circulo__num3 = document.createElement("div");
-function juego(ficha__del__jugador, ficha__maquina) {
-    const contenedor__juego__interseccion__id = document.getElementById("contenedor__juego__interseccion__id");
+const circuloNum1 = document.createElement("div");
+const circuloNum2 = document.createElement("div");
+const circuloNum3 = document.createElement("div");
+function juego(fichaJugador, fichaMaquina) {
+    const contenedorDeJuegoInterseccion__id = document.getElementById("contenedor__juego__interseccion__id");
     //Boton de reinicio
-    jugar__de__nuevoBoton.textContent = "PLAY AGAIN";
-    jugar__de__nuevoBoton.classList.add("jugar__de__nuevo");
-    jugar__de__nuevoBoton.id = 'jugar__de__nuevo__id';
-    contenedor__juego__interseccion__id.appendChild(jugar__de__nuevoBoton);
-    jugar__de__nuevoBoton.addEventListener('click', () => {
+    jugarDeNuevoBoton.textContent = "PLAY AGAIN";
+    jugarDeNuevoBoton.classList.add("jugar__de__nuevo");
+    jugarDeNuevoBoton.id = 'jugar__de__nuevo__id';
+    contenedorDeJuegoInterseccion__id.appendChild(jugarDeNuevoBoton);
+    jugarDeNuevoBoton.addEventListener('click', () => {
         reinicioDeJuego();
     });
     //Texto de aviso
-    resultado__texto.classList.add("resultado__de__juego");
-    if (ficha__del__jugador === ficha__maquina) {
-        resultado__texto.textContent = "DRAW";
-        contenedor__juego__interseccion__id.appendChild(resultado__texto);
+    resultadoTexto.classList.add("resultado__de__juego");
+    if (fichaJugador === fichaMaquina) {
+        resultadoTexto.textContent = "DRAW";
+        contenedorDeJuegoInterseccion__id.appendChild(resultadoTexto);
         return;
     }
     const ganaContra = {
@@ -137,32 +137,32 @@ function juego(ficha__del__jugador, ficha__maquina) {
         papel: "piedra",
         tijera: "papel"
     };
-    if (ganaContra[ficha__del__jugador] === ficha__maquina) {
+    if (ganaContra[fichaJugador] === fichaMaquina) {
         //Ganaste
-        resultado__texto.textContent = "YOU WIN";
-        contenedor__juego__interseccion__id.appendChild(resultado__texto);
+        resultadoTexto.textContent = "YOU WIN";
+        contenedorDeJuegoInterseccion__id.appendChild(resultadoTexto);
         let win = "WIN";
         //Circulos que agregan diseño del lado ganador
-        circulo__num1.classList.add("circulo__num1__ganador");
-        contenedor__juego__interseccion__id.appendChild(circulo__num1);
-        circulo__num2.classList.add("circulo__num2__ganador");
-        contenedor__juego__interseccion__id.appendChild(circulo__num2);
-        circulo__num3.classList.add("circulo__num3__ganador");
-        contenedor__juego__interseccion__id.appendChild(circulo__num3);
+        circuloNum1.classList.add("circulo__num1__ganador");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum1);
+        circuloNum2.classList.add("circulo__num2__ganador");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum2);
+        circuloNum3.classList.add("circulo__num3__ganador");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum3);
         puntaje(win);
     }
     else {
         //Perdiste
-        resultado__texto.textContent = "YOU LOSE";
-        contenedor__juego__interseccion__id.appendChild(resultado__texto);
+        resultadoTexto.textContent = "YOU LOSE";
+        contenedorDeJuegoInterseccion__id.appendChild(resultadoTexto);
         let lose = "LOSE";
         //Circulso que agregan diseño del lado perdedor
-        circulo__num1.classList.add("circulo__num1__perdedor");
-        contenedor__juego__interseccion__id.appendChild(circulo__num1);
-        circulo__num2.classList.add("circulo__num2__perdedor");
-        contenedor__juego__interseccion__id.appendChild(circulo__num2);
-        circulo__num3.classList.add("circulo__num3__perdedor");
-        contenedor__juego__interseccion__id.appendChild(circulo__num3);
+        circuloNum1.classList.add("circulo__num1__perdedor");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum1);
+        circuloNum2.classList.add("circulo__num2__perdedor");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum2);
+        circuloNum3.classList.add("circulo__num3__perdedor");
+        contenedorDeJuegoInterseccion__id.appendChild(circuloNum3);
         puntaje(lose);
     }
 }
@@ -179,10 +179,10 @@ function reinicioDeJuego() {
     contenedor__juego__interseccion__id.classList.remove('espacio__extra');
     contenedor__juego__interseccion__id.classList.remove('modo__responsive');
     //Variables globales
-    eleccion__DelJugador__texto.remove();
-    eleccion__DeLaMaquina__texto.remove();
-    jugar__de__nuevoBoton.remove();
-    resultado__texto.remove();
+    eleccionDelJugadorTexto.remove();
+    eleccionDeLaMaquinaTexto.remove();
+    jugarDeNuevoBoton.remove();
+    resultadoTexto.remove();
     fichaPapelMaquina.classList.remove("seleccionada");
     fichaTijeraMaquina.classList.remove("seleccionada");
     fichaRocaMaquina.classList.remove("seleccionada");
@@ -195,12 +195,12 @@ function reinicioDeJuego() {
     fichaInteriorTijera.classList.remove("seleccionado");
     fichaInteriorRoca.classList.remove("seleccionado");
     //Circulos que agregan diseño
-    circulo__num1.remove();
-    circulo__num2.remove();
-    circulo__num3.remove();
-    circulo__num1.classList.remove("circulo__num1__ganador", "circulo__num1__perdedor");
-    circulo__num2.classList.remove("circulo__num2__ganador", "circulo__num2__perdedor");
-    circulo__num3.classList.remove("circulo__num3__ganador", "circulo__num3__perdedor");
+    circuloNum1.remove();
+    circuloNum2.remove();
+    circuloNum3.remove();
+    circuloNum1.classList.remove("circulo__num1__ganador", "circulo__num1__perdedor");
+    circuloNum2.classList.remove("circulo__num2__ganador", "circulo__num2__perdedor");
+    circuloNum3.classList.remove("circulo__num3__ganador", "circulo__num3__perdedor");
 }
 //Funcion que sube o baja tu puntaje dependiendo de tus jugadas
 function puntaje(variable) {
