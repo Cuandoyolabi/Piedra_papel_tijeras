@@ -18,14 +18,14 @@
     --Header-Outline: hsl(217, 16%, 45%);
 }
 
-
 .contenedor__principal{
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
     position: relative;
     z-index: 1;
     background: radial-gradient(circle at center, hsl(214, 51%, 36%), hsl(237, 49%, 15%));
-
 }
 
 /*------------------Seccion de arriba ------------------- */
@@ -87,13 +87,12 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-
 }
 
 .contenedor__juego__interseccion{
-    width: 375px;
+    width: 400px;
     height: 400px;
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,7 +175,9 @@
 
 .roca{
     background: radial-gradient(circle at center, var(--Rock-Gradient));
-    top: 230px; left: 130px;
+    position: absolute;
+    top: 230px;
+    left: 130px;
     transition: all 0.4s ease-in-out;
     box-shadow: -1px -14px 0px -10px rgba(165,50,52,0.36) inset;
     -webkit-box-shadow: -1px -18px 0px -10px rgba(165,50,52,0.36) inset;
@@ -368,7 +369,7 @@
     top: 0; left: 0;
     width: 100%; height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1000;
+    z-index: 100;
 }
 
 .modal__oscuro.active {
@@ -401,7 +402,10 @@
 }
 
 /* -------------------Media quieries para tablet-------------------*/
+@media (max-width: 342px){
+}
 
+/* -------------------Media quieries para tablet-------------------*/
 @media (min-width: 700px){
 
     .contenedor__conjunto{
@@ -431,12 +435,6 @@
     .contenedor__juego{
         top: 250px;
         height: 50%;
-    }
-
-    .contenedor__juego__interseccion{
-        height: 100%;
-        position: relative;     
-
     }
 
     .contenedor__juego__interseccion.modo__responsive{
@@ -656,7 +654,6 @@
 }
 
 /*------------------Media queries para computadora-------------*/
-
 @media (min-width: 1024px){
 
     body{
@@ -692,11 +689,6 @@
         height: 55%;
     }
 
-    .contenedor__juego__interseccion{
-        height: 100%;
-        position: relative;     
-    }
-
     .contenedor__juego__interseccion.modo__responsive{
         width: 60%;
         height: 100%;
@@ -728,8 +720,8 @@
     }
 
     .roca{
-        top: 220px;
-        left: 90px;
+        top: 225px;
+        left: 108px;
     }
 
     .ficha__icono{
@@ -890,7 +882,7 @@
 
     .pagina__reglas{
         width: 500px; height: 500px;
-        top: 100px; left: 0; right: 0;
+        top: 20%; left: 0; right: 0;
         margin: auto;
         border-radius: 9px;
     }
@@ -914,27 +906,6 @@
 
 }
 
-/*----Media queries para tablets y computadoras con un ancho grande----*/
-@media (min-width: 1024px) and (min-height: 1366px){
-
-    .contenedor__juego{
-        top: 300px;
-        height: 60%;
-
-    }
-
-    .contenedor__juego__interseccion{
-        height: 50%;
-        position: relative;       
-    }
-
-    .contenedor__juego__interseccion.modo__responsive{
-        width: 90%;
-        height: 100%;
-    }
-
-}
-
 @media (min-width: 900px) and (min-height: 1366px){
 
     .contenedor__juego{
@@ -942,15 +913,9 @@
         height: 60%;
     }
 
-    .contenedor__juego__interseccion{
-        height: 40%;
-        position: relative;    
-
-    }
-
     .contenedor__juego__interseccion.modo__responsive{
         width: 90%;
-        height: 100%;
+        height: 60%;
     }
 
 }
