@@ -2,7 +2,8 @@
 Breve descripción del proyecto
 
 ## Capturas
-Imagen o GIF del proyecto funcionando
+![PiedraPapelTijeras](PiedraPapelTijeras.png)
+![PiedraPapelTijeras](PiedraPapelTijeras2.png)
 
 ## Tecnologías 🔎
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
