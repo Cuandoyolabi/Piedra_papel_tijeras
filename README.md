@@ -1,12 +1,12 @@
 # Piedra papel y tijeras
-Aplicacion que se basa en el iconico juego de Piedra papel y tijeras. <br>
-Elige tu ficha y el juego seleccionara aleatoriamente la ficha rival <br>
-Saldra automaticamente el resultado y el marcador aumentara en uno.
-Proyecto inspirado que fue un reto completado de la plataforma: FrontendMentor.
+Aplicación inspirada en el clásico juego de Piedra, Papel o Tijeras. <br>
+El usuario elige una ficha y el sistema selecciona aleatoriamente la del oponente. <br>
+El resultado se muestra de inmediato y el marcador se actualiza automáticamente. <br>
+Este proyecto fue desarrollado como parte de un reto de la plataforma Frontend Mentor.
 
 ## Capturas
-![PiedraPapelTijeras](PiedraPapelTijeras.png)
-![PiedraPapelTijeras](PiedraPapelTijeras2.png)
+![PiedraPapelTijeras](images/PiedraPapelTijeras.png)
+![PiedraPapelTijeras](images/PiedraPapelTijeras2.png)
 
 ## Tecnologías 🔎
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -22,16 +22,15 @@ Proyecto inspirado que fue un reto completado de la plataforma: FrontendMentor.
 -Logica de juego <br>
 
 ## Instalación 🔧
-1-Clonar el proyecto: git clone https://github.com/TUUSUARIO/NOMBRE_DEL_REPO.git
-2-Entra a la carpeta del proyecto: cd NOMBRE_DEL_REPO
-3- Dependencias que usa el proyecto y como instalarlas:
+Este proyecto no requiere ningun tipo de instalacion, todo esta en las carpetas. <br>
+-Si se desea modificar el main.ts, si seria necesario instalar node.js
 
 ## Uso 💡
-Es un juego simple, hay 3 fichas: Piedra, Papel y Tijeras.
+Es un juego simple, hay 3 fichas: Piedra, Papel y Tijeras. <br>
 Selecciona una y la maquina elegira otra.
 
 ## Demo 📌
-Link al demo
+https://piedrapapeltijerasss.netlify.app/
 
 ## Licencia
 All Rights Reserved.
