@@ -1,18 +1,24 @@
-# Nombre del Proyecto
-Breve descripción del proyecto
+# Piedra papel y tijeras
+Aplicacion que se basa en el iconico juego de Piedra papel y tijeras. <br>
+Elige tu ficha y el juego seleccionara aleatoriamente la ficha rival <br>
+Saldra automaticamente el resultado y el marcador aumentara en uno.
+Proyecto inspirado que fue un reto completado de la plataforma: FrontendMentor.
 
 ## Capturas
-Imagen o GIF del proyecto funcionando
+
 
 ## Tecnologías 🔎
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white)
 
 ## Características 💎
-Característica 1
-Característica 2
-Característica 3
+-Interfaz dinamica <br>
+-Diseño responsivo <br>
+-Juego interactivo <br>
+-Logica de juego <br>
 
 ## Instalación 🔧
 1-Clonar el proyecto: git clone https://github.com/TUUSUARIO/NOMBRE_DEL_REPO.git
@@ -20,7 +26,8 @@ Característica 3
 3- Dependencias que usa el proyecto y como instalarlas:
 
 ## Uso 💡
-Cómo usar tu proyecto, con ejemplos
+Es un juego simple, hay 3 fichas: Piedra, Papel y Tijeras.
+Selecciona una y la maquina elegira otra.
 
 ## Demo 📌
 Link al demo
